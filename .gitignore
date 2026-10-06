@@ -1,0 +1,25 @@
+.env
+.env.*
+!.env.example
+.git/
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+# Insumos privados e snapshots RAG
+dados/privados/*
+!dados/privados/.gitkeep
+resultados/
+relatorios/
+AGENTS.md
+memory.md
+for-agents/
+*.jsonl
+*.csv
+*.sqlite
+*.db
+*.npy
+*.npz
+*.pdf
+proveniencia.json
+insumos-autorizados/
