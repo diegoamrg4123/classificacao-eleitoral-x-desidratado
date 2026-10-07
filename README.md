@@ -1,6 +1,6 @@
 # Classificação textual de publicações do X
 
-Cópia pública desidratada do executor de pesquisa. Compartilha somente os IDs nativos dos posts: 1.461 na base e 223 na seleção histórica. Não contém textos das publicações, autoria, triagem detalhada, pacotes RAG, respostas de modelo ou credenciais. Não há liberação jurídica implícita para os materiais de terceiros usados no projeto original. Repositório público não significa corpus textual com licença aberta.
+Cópia pública desidratada do executor de pesquisa, com o modelo `google/gemma-4-31b-it` via OpenRouter. O modelo foi substituído por pedido de Diego, mantendo dados, contexto, prompt, contrato e parâmetros. Compartilha somente os IDs nativos dos posts: 1.461 na base e 223 na seleção histórica. Não contém textos das publicações, autoria, triagem detalhada, pacotes RAG, respostas de modelo ou credenciais. Não há liberação jurídica implícita para os materiais de terceiros usados no projeto original. Repositório público não significa corpus textual com licença aberta.
 
 ## Conteúdo
 
@@ -42,7 +42,9 @@ O código preserva a lógica e contrato do executor original, que neste pacote n
 
 ## Resultados de origem, agregados
 
-A run `20261006T121012788430Z` tinha 223 selecionados: 82 classificações provisórias, 122 sem categoria, 6 respostas rejeitadas pelo contrato, 10 decisões de contexto insuficiente e 3 abstenções. Foram 240 tentativas de chamada, todas com o modelo solicitado na auditoria local. Os resultados e rótulos associados a indivíduos foram deliberadamente excluídos; nenhuma categoria sensível é publicada por ID. Os totais são apenas um registro agregado da run original, não resultado reproduzido por esta cópia.
+A execução vigente de origem usa `google/gemma-4-31b-it` via OpenRouter, mantendo insumos, contexto, prompt, contrato e parâmetros anteriores. A run anterior `20261006T121012788430Z`, com `google/gemma-4-26b-a4b-it`, permanece preservada na origem, separada da nova execução.
+
+A run `20261007T223819272404Z` foi concluída e auditada com 223 selecionados: 69 classificações provisórias, 100 sem categoria, nenhuma resposta rejeitada ao final pelo contrato, sete decisões de contexto insuficiente e 47 abstenções. Foram 224 tentativas de chamada, todas com o modelo solicitado na auditoria local. Os 69 registros classificados somam 69 atribuições primárias e três secundárias, totalizando 72 atribuições. São 66 registros com uma categoria e três com duas. Os resultados e rótulos associados a indivíduos foram deliberadamente excluídos; nenhuma categoria sensível é publicada por ID. Os totais são apenas um registro agregado da run de origem, não resultado reproduzido por esta cópia. A Figura 3 apresenta essa execução.
 
 ## Licença e citação
 

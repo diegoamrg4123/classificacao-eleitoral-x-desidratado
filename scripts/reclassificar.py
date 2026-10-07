@@ -14,7 +14,7 @@ import urllib.request
 import urllib.error
 
 ROOT = Path(__file__).resolve().parents[1]
-MODEL = 'google/gemma-4-26b-a4b-it'
+MODEL = 'google/gemma-4-31b-it'
 API = 'https://openrouter.ai/api/v1'
 STATUSES = {'classified_provisional', 'no_matching_category', 'insufficient_context', 'abstained'}
 SUPERS = {'discurso_de_odio_eleitoral', 'discursos_antidemocraticos'}
