@@ -1,0 +1,507 @@
+# Ontologia inicial do dominio eleitoral. Versao 0.1.0 em revisao.
+# Wikitext foi insumo de migracao e nao e SOURCE deste projeto.
+
+ONTOLOGY conteudo_tema_eleitoral
+    definicao_operacional: Unidade de analise cujo tema, uso ou contexto relevante envolve eleicoes, atores eleitorais, instituicoes democraticas ou processos de votacao.
+    tipo_conceito: estrutural
+    papel_hierarquico: raiz
+    rotulo_preferido: Conteúdo de tema eleitoral
+END ONTOLOGY
+
+ONTOLOGY desinformacao
+    definicao_operacional: Conceito agregador para fenomenos de desordem informacional analisados por dimensoes separadas de veracidade e integridade, sem substituir suas classificacoes.
+    tipo_conceito: estrutural
+    papel_hierarquico: agregador
+    conceito_pai: conteudo_tema_eleitoral
+    rotulo_preferido: Desinformação
+END ONTOLOGY
+
+ONTOLOGY veracidade_da_informacao
+    definicao_operacional: Dimensao transversal que descreve o estado factual das afirmacoes verificaveis, independentemente da intencao de quem as produziu.
+    tipo_conceito: estrutural
+    papel_hierarquico: dimensao
+    conceito_pai: desinformacao
+    rotulo_preferido: Veracidade da Informação
+    pergunta_operacional: As afirmacoes factuais centrais sao verdadeiras diante das evidencias disponiveis?
+END ONTOLOGY
+
+ONTOLOGY integridade_da_informacao
+    definicao_operacional: Dimensao transversal que avalia autenticidade, sintese, manipulacao e adequacao contextual do artefato informacional.
+    tipo_conceito: estrutural
+    papel_hierarquico: dimensao
+    conceito_pai: desinformacao
+    rotulo_preferido: Integridade da Informação
+    pergunta_operacional: O artefato e seu contexto sao autenticos e nao foram alterados de modo enganoso?
+END ONTOLOGY
+
+ONTOLOGY ilicitude_no_ambiente_digital
+    definicao_operacional: Dimensao transversal que gradua a clareza com que um conteudo configura ilicito verificavel, sem substituir avaliacao juridica formal.
+    tipo_conceito: estrutural
+    papel_hierarquico: dimensao
+    conceito_pai: conteudo_tema_eleitoral
+    rotulo_preferido: Ilicitude no Ambiente Digital
+    pergunta_operacional: Qual e o grau de confirmacao juridica ou tecnica da ilicitude?
+END ONTOLOGY
+
+ONTOLOGY dominio_eleitoral
+    definicao_operacional: Recorte tematico que organiza categorias de conteudo nocivo relacionadas a eleicoes, disputa politica, processo de votacao e legitimidade democratica.
+    tipo_conceito: estrutural
+    papel_hierarquico: dominio
+    conceito_pai: conteudo_tema_eleitoral
+    rotulo_preferido: Domínio Eleitoral
+END ONTOLOGY
+
+ONTOLOGY integridade_midiatica
+    definicao_operacional: Espectro complementar que classifica o artefato quanto a sintese ou manipulacao tecnica.
+    tipo_conceito: estrutural
+    papel_hierarquico: agregador
+    conceito_pai: integridade_da_informacao
+    rotulo_preferido: Espectro de Integridade Midiática
+END ONTOLOGY
+
+ONTOLOGY integridade_contextual
+    definicao_operacional: Espectro complementar que classifica a autenticidade do contexto atribuido a um artefato.
+    tipo_conceito: estrutural
+    papel_hierarquico: agregador
+    conceito_pai: integridade_da_informacao
+    rotulo_preferido: Espectro de Integridade Contextual
+END ONTOLOGY
+
+ONTOLOGY notoriamente_veridico
+    definicao_operacional: Fato comprovado por consenso entre fontes confiaveis, sem controversia razoavel.
+    tipo_conceito: classificatorio
+    papel_hierarquico: valor_escala
+    criterio_inclusao: Evidencia independente e convergente confirma a afirmacao.
+    criterio_exclusao: Apenas preponderancia parcial, debate legitimo ou ausencia de verificacao conclusiva.
+    conceito_pai: veracidade_da_informacao
+    rotulo_preferido: Notoriamente Verídico
+    ordem_escala: 1
+END ONTOLOGY
+
+ONTOLOGY sugestivamente_veridico
+    definicao_operacional: Preponderancia de evidencia apoia a afirmacao, mas permanece margem legitima para revisao.
+    tipo_conceito: classificatorio
+    papel_hierarquico: valor_escala
+    criterio_inclusao: A maioria das fontes confiaveis apoia a afirmacao sem consenso absoluto.
+    criterio_exclusao: Consenso incontroverso, evidencia equilibrada ou preponderancia contraria.
+    conceito_pai: veracidade_da_informacao
+    rotulo_preferido: Sugestivamente Verídico
+    ordem_escala: 2
+END ONTOLOGY
+
+ONTOLOGY inconclusivo_veracidade
+    definicao_operacional: Evidencia insuficiente ou debate em andamento impede determinar a veracidade com seguranca razoavel.
+    tipo_conceito: classificatorio
+    papel_hierarquico: valor_escala
+    criterio_inclusao: As evidencias disponiveis sao insuficientes, conflitantes ou ainda estao em investigacao.
+    criterio_exclusao: Ha preponderancia clara ou comprovacao conclusiva em qualquer direcao.
+    conceito_pai: veracidade_da_informacao
+    rotulo_preferido: Inconclusivo quanto à Veracidade
+    ordem_escala: 3
+END ONTOLOGY
+
+ONTOLOGY sugestivamente_inveridico
+    definicao_operacional: Preponderancia de evidencia contradiz a afirmacao, embora reste margem limitada de duvida.
+    tipo_conceito: classificatorio
+    papel_hierarquico: valor_escala
+    criterio_inclusao: A maioria das fontes confiaveis contradiz a afirmacao sem falsidade conclusiva.
+    criterio_exclusao: Falsidade incontroversa, ausencia de preponderancia ou predominio de evidencia favoravel.
+    conceito_pai: veracidade_da_informacao
+    rotulo_preferido: Sugestivamente Inverídico
+    ordem_escala: 4
+END ONTOLOGY
+
+ONTOLOGY notoriamente_inveridico
+    definicao_operacional: Falsidade comprovada por consenso entre fontes confiaveis, sem controversia razoavel.
+    tipo_conceito: classificatorio
+    papel_hierarquico: valor_escala
+    criterio_inclusao: Investigacoes independentes e evidencia incontroversa demonstram a falsidade.
+    criterio_exclusao: Apenas suspeita, evidencia incompleta ou debate legitimo ainda aberto.
+    conceito_pai: veracidade_da_informacao
+    rotulo_preferido: Notoriamente Inverídico
+    ordem_escala: 5
+END ONTOLOGY
+
+ONTOLOGY conteudo_sintetico
+    definicao_operacional: Conteudo criado algoritmicamente sem captura autentica correspondente do evento, pessoa, voz ou cena representada.
+    tipo_conceito: classificatorio
+    papel_hierarquico: supercategoria
+    criterio_inclusao: Ha evidencia de geracao algoritmica integral ou ausencia de original autentico.
+    criterio_exclusao: Captura real, edicao de original autentico ou obra humana sem representacao enganosa de evento real.
+    conceito_pai: integridade_da_informacao
+    rotulo_preferido: Conteúdo Sintético
+END ONTOLOGY
+
+ONTOLOGY imagem_sintetica
+    definicao_operacional: Imagem, fotografia, ilustracao ou grafico gerado por IA sem correspondencia autentica com a cena apresentada.
+    tipo_conceito: classificatorio
+    papel_hierarquico: subcategoria
+    criterio_inclusao: A imagem foi gerada algoritmicamente e representa como real uma composicao sem captura correspondente.
+    criterio_exclusao: Fotografia real, montagem baseada em fotografia ou arte identificada como ficcao.
+    conceito_pai: conteudo_sintetico
+    rotulo_preferido: Imagem Sintética
+    sinais_observaveis: Geometria impossivel, tipografia ilegivel, padroes repetitivos e inconsistencias de reflexo.
+END ONTOLOGY
+
+ONTOLOGY video_sintetico
+    definicao_operacional: Video ou deepfake gerado por IA que representa fala, identidade ou situacao sem registro audiovisual autentico correspondente.
+    tipo_conceito: classificatorio
+    papel_hierarquico: subcategoria
+    criterio_inclusao: A sequencia audiovisual foi sintetizada integralmente ou substitui identidade e fala de forma gerativa.
+    criterio_exclusao: Video real apenas recortado, acelerado ou editado sem sintese gerativa central.
+    conceito_pai: conteudo_sintetico
+    rotulo_preferido: Vídeo Sintético
+    sinonimos: deepfake de video
+END ONTOLOGY
+
+ONTOLOGY audio_sintetico
+    definicao_operacional: Voz, fala, som ou musica criada por sintese computacional sem captacao autentica correspondente.
+    tipo_conceito: classificatorio
+    papel_hierarquico: subcategoria
+    criterio_inclusao: Ha clonagem vocal, text to speech ou sintese de som apresentada como captacao real.
+    criterio_exclusao: Audio real com corte, equalizacao ou mudanca simples de velocidade.
+    conceito_pai: conteudo_sintetico
+    rotulo_preferido: Áudio Sintético
+    sinonimos: clonagem de voz, voz sintetica
+END ONTOLOGY
+
+ONTOLOGY conteudo_manipulado
+    definicao_operacional: Conteudo com original autentico que foi materialmente alterado para mudar seu significado ou induzir interpretacao enganosa.
+    tipo_conceito: classificatorio
+    papel_hierarquico: supercategoria
+    criterio_inclusao: Existe original autentico e alteracao tecnica material que modifica a mensagem.
+    criterio_exclusao: Ajuste cosmetico, edicao transparente, parodia marcada ou ausencia de mudanca de sentido.
+    conceito_pai: integridade_da_informacao
+    rotulo_preferido: Conteúdo Manipulado
+END ONTOLOGY
+
+ONTOLOGY editado
+    definicao_operacional: Video ou audio autentico rearranjado, acrescido ou reorganizado para alterar a sequencia, fala ou narrativa.
+    tipo_conceito: classificatorio
+    papel_hierarquico: subcategoria
+    criterio_inclusao: A edicao remove, adiciona ou reorganiza elementos de modo material para mudar o sentido.
+    criterio_exclusao: Edicao tecnica neutra ou transparente que preserva o significado.
+    conceito_pai: conteudo_manipulado
+    rotulo_preferido: Editado
+END ONTOLOGY
+
+ONTOLOGY recortado
+    definicao_operacional: Imagem, video ou audio cortado para remover elementos ou trechos cujo contexto alteraria a interpretacao.
+    tipo_conceito: classificatorio
+    papel_hierarquico: subcategoria
+    criterio_inclusao: O recorte exclui informacao relevante e produz leitura materialmente diferente do original.
+    criterio_exclusao: Recorte apenas espacial ou temporal sem perda de contexto necessario.
+    conceito_pai: conteudo_manipulado
+    rotulo_preferido: Recortado
+END ONTOLOGY
+
+ONTOLOGY transformado
+    definicao_operacional: Conteudo autentico com mudanca substancial de velocidade, tom, cor, elementos visuais ou outros atributos para enganar.
+    tipo_conceito: classificatorio
+    papel_hierarquico: subcategoria
+    criterio_inclusao: A transformacao tecnica modifica caracteristica central e induz conclusao falsa sobre o original.
+    criterio_exclusao: Correcao tecnica, acessibilidade ou efeito artistico claramente informado.
+    conceito_pai: conteudo_manipulado
+    rotulo_preferido: Transformado
+END ONTOLOGY
+
+ONTOLOGY conteudo_descontextualizado
+    definicao_operacional: Conteudo real associado a evento, periodo, local ou pessoa diferentes daqueles em que foi produzido.
+    tipo_conceito: classificatorio
+    papel_hierarquico: categoria
+    criterio_inclusao: O artefato autentico recebe atribuicao factual de origem, tempo, local ou autoria comprovadamente diferente.
+    criterio_exclusao: O contexto atribuido corresponde ao original ou a incerteza e explicitamente comunicada.
+    conceito_pai: integridade_da_informacao
+    rotulo_preferido: Conteúdo Descontextualizado
+END ONTOLOGY
+
+ONTOLOGY descontextualizacao
+    definicao_operacional: Trecho autentico de fala, entrevista ou documento apresentado sem partes complementares que alterariam sua interpretacao.
+    tipo_conceito: classificatorio
+    papel_hierarquico: categoria
+    criterio_inclusao: A omissao de trechos adjacentes muda materialmente o sentido da fala ou do documento.
+    criterio_exclusao: O excerto e fiel, suficiente e identificado como parcial.
+    conceito_pai: integridade_da_informacao
+    rotulo_preferido: Descontextualização
+END ONTOLOGY
+
+ONTOLOGY contexto_ausente
+    definicao_operacional: Conteudo autentico divulgado sem informacoes necessarias de data, local, circunstancia ou finalidade, produzindo interpretacao enganosa.
+    tipo_conceito: classificatorio
+    papel_hierarquico: categoria
+    criterio_inclusao: A ausencia de contexto indispensavel leva a conclusao materialmente diferente da leitura contextualizada.
+    criterio_exclusao: O contexto omitido e irrelevante para a interpretacao ou esta disponivel de modo claro.
+    conceito_pai: integridade_da_informacao
+    rotulo_preferido: Contexto Ausente
+END ONTOLOGY
+
+ONTOLOGY notoriamente_sintetico_ou_manipulado
+    definicao_operacional: Artefato claramente sintetizado ou substancialmente editado, confirmado por analise tecnica, origem ou evidencia perceptual robusta.
+    tipo_conceito: classificatorio
+    papel_hierarquico: valor_escala
+    criterio_inclusao: As evidencias disponiveis correspondem ao grau descrito.
+    criterio_exclusao: As evidencias preponderantes correspondem a outro grau do mesmo espectro.
+    conceito_pai: integridade_midiatica
+    rotulo_preferido: Notoriamente Sintético ou Manipulado
+    ordem_escala: 1
+END ONTOLOGY
+
+ONTOLOGY provavelmente_sintetico_ou_manipulado
+    definicao_operacional: Artefato com fortes indicadores de sintese ou manipulacao, mas sem confirmacao tecnica conclusiva.
+    tipo_conceito: classificatorio
+    papel_hierarquico: valor_escala
+    criterio_inclusao: As evidencias disponiveis correspondem ao grau descrito.
+    criterio_exclusao: As evidencias preponderantes correspondem a outro grau do mesmo espectro.
+    conceito_pai: integridade_midiatica
+    rotulo_preferido: Provavelmente Sintético ou Manipulado
+    ordem_escala: 2
+END ONTOLOGY
+
+ONTOLOGY inconclusivo_integridade_midiatica
+    definicao_operacional: Integridade tecnica do artefato nao pode ser determinada com as evidencias disponiveis.
+    tipo_conceito: classificatorio
+    papel_hierarquico: valor_escala
+    criterio_inclusao: As evidencias disponiveis correspondem ao grau descrito.
+    criterio_exclusao: As evidencias preponderantes correspondem a outro grau do mesmo espectro.
+    conceito_pai: integridade_midiatica
+    rotulo_preferido: Inconclusivo quanto à Integridade Midiática
+    ordem_escala: 3
+END ONTOLOGY
+
+ONTOLOGY provavelmente_integro
+    definicao_operacional: Artefato aparentemente autentico e nao manipulado, sem verificacao tecnica completa.
+    tipo_conceito: classificatorio
+    papel_hierarquico: valor_escala
+    criterio_inclusao: As evidencias disponiveis correspondem ao grau descrito.
+    criterio_exclusao: As evidencias preponderantes correspondem a outro grau do mesmo espectro.
+    conceito_pai: integridade_midiatica
+    rotulo_preferido: Provavelmente Íntegro
+    ordem_escala: 4
+END ONTOLOGY
+
+ONTOLOGY notoriamente_integro
+    definicao_operacional: Artefato de origem verificavel, confirmado como autentico e sem evidencia de sintese ou edicao material.
+    tipo_conceito: classificatorio
+    papel_hierarquico: valor_escala
+    criterio_inclusao: As evidencias disponiveis correspondem ao grau descrito.
+    criterio_exclusao: As evidencias preponderantes correspondem a outro grau do mesmo espectro.
+    conceito_pai: integridade_midiatica
+    rotulo_preferido: Notoriamente Íntegro
+    ordem_escala: 5
+END ONTOLOGY
+
+ONTOLOGY notoriamente_descontextualizado
+    definicao_operacional: Conteudo autentico apresentado em contexto comprovadamente falso por fonte primaria ou verificacao especializada.
+    tipo_conceito: classificatorio
+    papel_hierarquico: valor_escala
+    criterio_inclusao: As evidencias disponiveis correspondem ao grau descrito.
+    criterio_exclusao: As evidencias preponderantes correspondem a outro grau do mesmo espectro.
+    conceito_pai: integridade_contextual
+    rotulo_preferido: Notoriamente Descontextualizado
+    ordem_escala: 1
+END ONTOLOGY
+
+ONTOLOGY provavelmente_descontextualizado
+    definicao_operacional: Indicadores sugerem contexto incorreto, mas a origem ainda nao foi documentada de forma conclusiva.
+    tipo_conceito: classificatorio
+    papel_hierarquico: valor_escala
+    criterio_inclusao: As evidencias disponiveis correspondem ao grau descrito.
+    criterio_exclusao: As evidencias preponderantes correspondem a outro grau do mesmo espectro.
+    conceito_pai: integridade_contextual
+    rotulo_preferido: Provavelmente Descontextualizado
+    ordem_escala: 2
+END ONTOLOGY
+
+ONTOLOGY inconclusivo_integridade_contextual
+    definicao_operacional: O contexto atribuido ao artefato nao pode ser determinado com as evidencias disponiveis.
+    tipo_conceito: classificatorio
+    papel_hierarquico: valor_escala
+    criterio_inclusao: As evidencias disponiveis correspondem ao grau descrito.
+    criterio_exclusao: As evidencias preponderantes correspondem a outro grau do mesmo espectro.
+    conceito_pai: integridade_contextual
+    rotulo_preferido: Inconclusivo quanto à Integridade Contextual
+    ordem_escala: 3
+END ONTOLOGY
+
+ONTOLOGY provavelmente_contextualizado
+    definicao_operacional: O contexto parece correto e nao ha indicador relevante de descontextualizacao, mas falta confirmacao primaria.
+    tipo_conceito: classificatorio
+    papel_hierarquico: valor_escala
+    criterio_inclusao: As evidencias disponiveis correspondem ao grau descrito.
+    criterio_exclusao: As evidencias preponderantes correspondem a outro grau do mesmo espectro.
+    conceito_pai: integridade_contextual
+    rotulo_preferido: Provavelmente Contextualizado
+    ordem_escala: 4
+END ONTOLOGY
+
+ONTOLOGY notoriamente_contextualizado
+    definicao_operacional: O contexto foi confirmado por fonte primaria ou verificacao especializada independente.
+    tipo_conceito: classificatorio
+    papel_hierarquico: valor_escala
+    criterio_inclusao: As evidencias disponiveis correspondem ao grau descrito.
+    criterio_exclusao: As evidencias preponderantes correspondem a outro grau do mesmo espectro.
+    conceito_pai: integridade_contextual
+    rotulo_preferido: Notoriamente Contextualizado
+    ordem_escala: 5
+END ONTOLOGY
+
+ONTOLOGY notoriamente_ilicito
+    definicao_operacional: Conteudo que configura ilicito claro e documentado por norma aplicavel, jurisprudencia, laudo tecnico ou verificacao especializada.
+    tipo_conceito: classificatorio
+    papel_hierarquico: valor_escala
+    criterio_inclusao: Ha confirmacao juridica ou tecnica direta da ilicitude.
+    criterio_exclusao: Apenas indicios, controversia juridica relevante ou ausencia de elemento tipico.
+    conceito_pai: ilicitude_no_ambiente_digital
+    rotulo_preferido: Notoriamente Ilícito
+    ordem_escala: 1
+END ONTOLOGY
+
+ONTOLOGY sugestivamente_ilicito
+    definicao_operacional: Conteudo com fortes indicios de ilicitude e elementos tipicos presentes, sem confirmacao definitiva.
+    tipo_conceito: classificatorio
+    papel_hierarquico: valor_escala
+    criterio_inclusao: Elementos tipicos e contexto sustentam probabilidade alta de ilicitude.
+    criterio_exclusao: Confirmacao conclusiva, equilibrio de interpretacoes ou predominio de licitude.
+    conceito_pai: ilicitude_no_ambiente_digital
+    rotulo_preferido: Sugestivamente Ilícito
+    ordem_escala: 2
+END ONTOLOGY
+
+ONTOLOGY inconclusivo_ilicitude
+    definicao_operacional: Conteudo cuja ilicitude nao pode ser determinada por ambiguidade de intencao, contexto ou norma aplicavel.
+    tipo_conceito: classificatorio
+    papel_hierarquico: valor_escala
+    criterio_inclusao: Ha zona cinzenta juridica ou evidencia insuficiente para decidir.
+    criterio_exclusao: Ha preponderancia clara em favor de ilicitude ou licitude.
+    conceito_pai: ilicitude_no_ambiente_digital
+    rotulo_preferido: Inconclusivo quanto à Ilicitude
+    ordem_escala: 3
+END ONTOLOGY
+
+ONTOLOGY sugestivamente_licito
+    definicao_operacional: Conteudo provavelmente licito, embora contenha elementos que ainda geram duvida interpretativa.
+    tipo_conceito: classificatorio
+    papel_hierarquico: valor_escala
+    criterio_inclusao: Predominam liberdade de expressao e ausencia de elemento tipico, com pequena margem de duvida.
+    criterio_exclusao: Licitude incontroversa ou indicios relevantes de ilicitude.
+    conceito_pai: ilicitude_no_ambiente_digital
+    rotulo_preferido: Sugestivamente Lícito
+    ordem_escala: 4
+END ONTOLOGY
+
+ONTOLOGY notoriamente_licito
+    definicao_operacional: Conteudo claramente protegido ou permitido, sem caracteristicas que configurem ilicito em norma aplicavel.
+    tipo_conceito: classificatorio
+    papel_hierarquico: valor_escala
+    criterio_inclusao: Opiniao, critica, informacao ou satira claramente licita no contexto analisado.
+    criterio_exclusao: Presenca de elemento tipico, restricao normativa aplicavel ou duvida juridica relevante.
+    conceito_pai: ilicitude_no_ambiente_digital
+    rotulo_preferido: Notoriamente Lícito
+    ordem_escala: 5
+END ONTOLOGY
+
+ONTOLOGY discurso_de_odio_eleitoral
+    definicao_operacional: Conteudo que ataca deliberadamente honra, reputacao, dignidade ou direitos de pessoas ou grupos no contexto eleitoral.
+    tipo_conceito: classificatorio
+    papel_hierarquico: supercategoria
+    criterio_inclusao: Ha ataque pessoal ou coletivo relacionado a disputa eleitoral, com dano reputacional, humilhacao ou incitacao discriminatoria.
+    criterio_exclusao: Critica de politica publica, competencia, ato documentado, satira marcada ou discordancia ideologica sem ataque a dignidade.
+    conceito_pai: dominio_eleitoral
+    rotulo_preferido: Discurso de Ódio Eleitoral
+    pergunta_operacional: O conteudo ataca deliberadamente a honra, a reputacao ou a dignidade de pessoa ou grupo no contexto eleitoral?
+END ONTOLOGY
+
+ONTOLOGY calunia_eleitoral
+    definicao_operacional: Atribuicao falsa e verificavel de fato definido como crime a pessoa no contexto eleitoral, apresentada como verdadeira.
+    tipo_conceito: classificatorio
+    papel_hierarquico: subcategoria
+    criterio_inclusao: Ha imputacao factual falsa de crime com potencial de dano reputacional eleitoral.
+    criterio_exclusao: Opiniao, insulto sem fato criminoso, acusacao comprovada ou relato fiel de processo existente.
+    conceito_pai: discurso_de_odio_eleitoral
+    rotulo_preferido: Calúnia Eleitoral
+    alvo_tipico: Candidato, agente politico ou pessoa vinculada ao processo eleitoral.
+END ONTOLOGY
+
+ONTOLOGY difamacao_eleitoral
+    definicao_operacional: Imputacao ou divulgacao de fato ofensivo a reputacao de pessoa no contexto eleitoral, independentemente de o fato ser verdadeiro.
+    tipo_conceito: classificatorio
+    papel_hierarquico: subcategoria
+    criterio_inclusao: Ha publicizacao de fato ofensivo com finalidade ou efeito de degradar reputacao eleitoral.
+    criterio_exclusao: Critica de desempenho publico, informacao de interesse publico tratada sem humilhacao ou imputacao falsa de crime.
+    conceito_pai: discurso_de_odio_eleitoral
+    rotulo_preferido: Difamação Eleitoral
+END ONTOLOGY
+
+ONTOLOGY injuria_eleitoral
+    definicao_operacional: Ofensa direta a dignidade ou ao decoro de pessoa no contexto eleitoral, sem necessidade de imputacao factual especifica.
+    tipo_conceito: classificatorio
+    papel_hierarquico: subcategoria
+    criterio_inclusao: Ha xingamento, humilhacao ou ridicularizacao dirigida a pessoa identificavel.
+    criterio_exclusao: Critica de ideias, desempenho ou politicas sem ofensa pessoal a dignidade.
+    conceito_pai: discurso_de_odio_eleitoral
+    rotulo_preferido: Injúria Eleitoral
+END ONTOLOGY
+
+ONTOLOGY odio_direcionado_a_grupos
+    definicao_operacional: Ataque a grupo protegido por caracteristica identitaria, demografica ou pertencimento politico reconhecido, no contexto eleitoral.
+    tipo_conceito: classificatorio
+    papel_hierarquico: subcategoria
+    criterio_inclusao: Ha generalizacao ofensiva, desumanizacao, discriminacao ou incitacao contra grupo protegido por caracteristica identitaria, demografica, religiosa, de genero, sexualidade, origem ou pertencimento politico.
+    criterio_exclusao: Mencao factual, critica de politica ou denuncia de discriminacao sem ataque ao grupo. Tambem fica de fora o ataque a grupos definidos apenas por ocupacao, atividade, profissao, torcida, time ou preferencia (ex.: youtubers, streamers, influencers, jogadores, programadores), ainda que a critica seja politica: esses casos usam injuria_eleitoral quando ha pessoa identificavel, ou nenhum conceito quando ha apenas posicao ou opiniao.
+    conceito_pai: discurso_de_odio_eleitoral
+    rotulo_preferido: Discurso de Ódio Direcionado a Grupos
+    alvo_tipico: Grupos raciais, religiosos, de genero, sexualidade, origem ou pertencimento politico.
+END ONTOLOGY
+
+ONTOLOGY discursos_antidemocraticos
+    definicao_operacional: Conteudo que fragiliza ou desacredita instituicoes democraticas, nega legitimidade eleitoral ou incita ruptura da ordem democratica.
+    tipo_conceito: classificatorio
+    papel_hierarquico: supercategoria
+    criterio_inclusao: Ha funcao de erosao de confianca institucional, negacao de legitimidade ou incitacao a acao antidemocratica.
+    criterio_exclusao: Critica institucional fundamentada, proposta de reforma democratica, educacao civica, investigacao legitima ou satira identificada.
+    conceito_pai: dominio_eleitoral
+    rotulo_preferido: Discursos Antidemocráticos
+    pergunta_operacional: O conteudo enfraquece a confianca democratica, nega legitimidade eleitoral ou incita ruptura institucional?
+END ONTOLOGY
+
+ONTOLOGY extremismo_antidemocratico
+    definicao_operacional: Conteudo que rejeita regras e instituicoes democraticas e promove ruptura sistemica, golpe, intervencao ou violencia politica.
+    tipo_conceito: classificatorio
+    papel_hierarquico: subcategoria
+    criterio_inclusao: Ha defesa explicita de golpe, dissolucao institucional, intervencao militar, estado de excecao ou violencia contra a ordem democratica.
+    criterio_exclusao: Critica de decisao ou instituicao dentro do marco constitucional e proposta democratica de reforma.
+    conceito_pai: discursos_antidemocraticos
+    rotulo_preferido: Extremismo Antidemocrático
+    mecanismo_de_dano: Subversao das instituicoes e normalizacao de ruptura autoritaria.
+END ONTOLOGY
+
+ONTOLOGY acusacao_de_fraude_institucional
+    definicao_operacional: Conteudo que alega, sem evidencia concreta verificavel, fraude ou manipulacao sistematica por instituicoes responsaveis pelo processo eleitoral.
+    tipo_conceito: classificatorio
+    papel_hierarquico: subcategoria
+    criterio_inclusao: Ha acusacao de fraude institucional sem evidencia crivel, baseada em fonte nao verificavel ou alegacao ja refutada.
+    criterio_exclusao: Denuncia com evidencia substancial, investigacao aberta por instituicao competente ou pergunta que reconhece incerteza.
+    conceito_pai: discursos_antidemocraticos
+    rotulo_preferido: Acusação de Fraude Institucional
+END ONTOLOGY
+
+ONTOLOGY ataque_as_urnas_eletronicas
+    definicao_operacional: Conteudo que dissemina alegacoes tecnicas infundadas sobre inseguranca, fraude ou manipulacao das urnas eletronicas e ignora mecanismos de auditoria.
+    tipo_conceito: classificatorio
+    papel_hierarquico: subcategoria
+    criterio_inclusao: Ha afirmacao conclusiva de vulnerabilidade ou fraude das urnas sem respaldo tecnico verificavel.
+    criterio_exclusao: Analise tecnica documentada, proposta de melhoria, pergunta aberta ou educacao sobre auditoria.
+    conceito_pai: discursos_antidemocraticos
+    rotulo_preferido: Ataque às Urnas Eletrônicas
+END ONTOLOGY
+
+ONTOLOGY critica_legitima_ou_neutra
+    definicao_operacional: Questionamento, analise ou proposta sobre instituicoes e processos eleitorais que permanece dentro do debate democratico e nao promove desinformacao nem ruptura.
+    tipo_conceito: fronteira_exclusao
+    papel_hierarquico: categoria
+    criterio_inclusao: Ha critica fundamentada, pergunta aberta, proposta de reforma legal ou educacao civica sem negacao de legitimidade.
+    criterio_exclusao: Alegacao infundada de fraude, rejeicao da ordem democratica ou incitacao a ruptura.
+    conceito_pai: dominio_eleitoral
+    rotulo_preferido: Crítica Legítima ou Neutra
+    notas: Conceito de fronteira do domínio, não subclasse de Discursos Antidemocráticos. ITEMs associados devem usar status excluido ou limite.
+END ONTOLOGY

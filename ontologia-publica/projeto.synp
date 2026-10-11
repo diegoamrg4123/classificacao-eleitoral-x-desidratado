@@ -1,0 +1,14 @@
+PROJECT ontologia_dominio_eleitoral_publica
+    TEMPLATE "template.synt"
+    INCLUDE ANNOTATIONS "fontes/registros/fontes-publicas.syn"
+    INCLUDE ANNOTATIONS "itens/evidencias-publicas.syn"
+    INCLUDE ONTOLOGY "ontologia/dominio-eleitoral.syno"
+    METADATA
+        version: 0.1.0
+        status: rascunho_em_revisao
+        language: pt-BR
+    END METADATA
+    DESCRIPTION
+    Recorte publico para consulta por revisores. Preserva a estrutura conceitual e a relacao complementar da ontologia de origem; inclui somente proveniencia normativa e evidencias conceituais selecionadas. Nao replica o corpus, os exemplos internos ou a base experimental. Os estados de revisao permanecem inalterados.
+    END DESCRIPTION
+END PROJECT

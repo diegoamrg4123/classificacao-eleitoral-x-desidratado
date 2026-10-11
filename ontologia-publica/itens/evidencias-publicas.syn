@@ -1,0 +1,517 @@
+ITEM @codigo_penal_1940
+    conteudo: Art. 138 - Caluniar alguem, imputando-lhe falsamente fato definido como crime.
+    funcao_item: evidencia_conceitual
+    forma_registro: transcricao_literal
+    status_enquadramento: incluido
+    conceitos: calunia_eleitoral
+    justificativa: O tipo geral fornece o nucleo legal de imputacao falsa de fato definido como crime, preservado operacionalmente pela categoria eleitoral.
+    identificador_ocorrencia: base_legal_cp_calunia
+    localizacao_na_fonte: Art. 138
+    tipo_midia: texto
+    confianca: 5
+    status_revisao: pendente
+END ITEM
+
+ITEM @codigo_penal_1940
+    conteudo: Art. 139 - Difamar alguem, imputando-lhe fato ofensivo a sua reputacao.
+    funcao_item: evidencia_conceitual
+    forma_registro: transcricao_literal
+    status_enquadramento: incluido
+    conceitos: difamacao_eleitoral
+    justificativa: O tipo geral fornece o nucleo legal de imputacao de fato ofensivo a reputacao, preservado operacionalmente pela categoria eleitoral.
+    identificador_ocorrencia: base_legal_cp_difamacao
+    localizacao_na_fonte: Art. 139 e paragrafo unico
+    tipo_midia: texto
+    confianca: 5
+    status_revisao: pendente
+END ITEM
+
+ITEM @codigo_penal_1940
+    conteudo: Art. 140 - Injuriar alguem, ofendendo-lhe a dignidade ou o decoro.
+    funcao_item: evidencia_conceitual
+    forma_registro: transcricao_literal
+    status_enquadramento: incluido
+    conceitos: injuria_eleitoral
+    justificativa: O tipo geral ancora a categoria operacional de ofensa direta a dignidade ou ao decoro sem imputacao factual especifica.
+    identificador_ocorrencia: base_legal_cp_injuria
+    localizacao_na_fonte: Art. 140, caput, paragrafos 2 e 3
+    tipo_midia: texto
+    confianca: 5
+    status_revisao: pendente
+END ITEM
+
+ITEM @codigo_eleitoral_1965
+    conteudo: Art. 324. Caluniar alguem, na propaganda eleitoral, ou visando fins de propaganda, imputando-lhe falsamente fato definido como crime.
+    funcao_item: evidencia_conceitual
+    forma_registro: transcricao_literal
+    status_enquadramento: incluido
+    conceitos: calunia_eleitoral
+    justificativa: O tipo eleitoral especifica que a imputacao falsa de crime deve ocorrer na propaganda eleitoral ou visar a seus fins para receber enquadramento eleitoral.
+    identificador_ocorrencia: base_legal_ce_calunia
+    localizacao_na_fonte: Art. 324
+    tipo_midia: texto
+    confianca: 5
+    status_revisao: pendente
+END ITEM
+
+ITEM @codigo_eleitoral_1965
+    conteudo: Art. 325. Difamar alguem, na propaganda eleitoral, ou visando a fins de propaganda, imputando-lhe fato ofensivo a sua reputacao.
+    funcao_item: evidencia_conceitual
+    forma_registro: transcricao_literal
+    status_enquadramento: incluido
+    conceitos: difamacao_eleitoral
+    justificativa: O tipo eleitoral ancora a categoria de difamacao quando a ofensa ocorre na propaganda eleitoral ou visa a seus fins.
+    identificador_ocorrencia: base_legal_ce_difamacao
+    localizacao_na_fonte: Art. 325 e paragrafo unico
+    tipo_midia: texto
+    confianca: 5
+    status_revisao: pendente
+END ITEM
+
+ITEM @codigo_eleitoral_1965
+    conteudo: Art. 326. Injuriar alguem, na propaganda eleitoral, ou visando a fins de propaganda, ofendendo-lhe a dignidade ou o decoro.
+    funcao_item: evidencia_conceitual
+    forma_registro: transcricao_literal
+    status_enquadramento: incluido
+    conceitos: injuria_eleitoral
+    justificativa: O tipo eleitoral ancora a categoria operacional de injuria quando a ofensa direta ocorre na propaganda eleitoral ou visa a seus fins.
+    identificador_ocorrencia: base_legal_ce_injuria
+    localizacao_na_fonte: Art. 326, caput e paragrafo 2
+    tipo_midia: texto
+    confianca: 5
+    status_revisao: pendente
+END ITEM
+
+ITEM @codigo_eleitoral_1965
+    conteudo: Art. 323. Divulgar, na propaganda eleitoral ou durante periodo de campanha eleitoral, fatos que sabe inveridicos em relacao a partidos ou candidatos e capazes de exercer influencia perante o eleitorado.
+    funcao_item: evidencia_conceitual
+    forma_registro: transcricao_literal
+    status_enquadramento: limite
+    conceitos: calunia_eleitoral
+    justificativa: O artigo delimita que divulgacao de fato sabidamente inveridico e influente no eleitorado nao e sinonimo automatico de calunia, que exige imputacao falsa de fato definido como crime.
+    identificador_ocorrencia: limite_legal_ce_fato_inveridico
+    localizacao_na_fonte: Art. 323
+    tipo_midia: texto
+    confianca: 5
+    status_revisao: pendente
+END ITEM
+
+ITEM @codigo_eleitoral_1965
+    conteudo: Art. 327. As penas cominadas nos arts. 324, 325 e 326 aumentam-se de um terco ate metade nas hipoteses legais, inclusive por menosprezo ou discriminacao a mulher, cor, raca ou etnia, e por meio da internet ou rede social.
+    funcao_item: evidencia_conceitual
+    forma_registro: adaptacao_de_material
+    status_enquadramento: incluido
+    conceitos: discurso_de_odio_eleitoral, injuria_eleitoral, odio_direcionado_a_grupos
+    justificativa: O artigo fornece contexto juridico para ataques eleitorais com discriminacao e circulacao digital, sem transformar as categorias ontologicas em declaracao automatica de ilicitude.
+    identificador_ocorrencia: base_legal_ce_aumentos_discriminacao
+    localizacao_na_fonte: Art. 327, IV e V
+    tipo_midia: texto
+    confianca: 5
+    status_revisao: pendente
+END ITEM
+
+ITEM @lei_7716_1989
+    conteudo: Art. 2-A. Injuriar alguem, ofendendo-lhe a dignidade ou o decoro, em razao de raca, cor, etnia ou procedencia nacional.
+    funcao_item: evidencia_conceitual
+    forma_registro: transcricao_literal
+    status_enquadramento: incluido
+    conceitos: injuria_eleitoral
+    justificativa: A injuria racial e ancora juridica especializada para casos individuais de injuria eleitoral motivada por raca, cor, etnia ou procedencia nacional.
+    identificador_ocorrencia: base_legal_lei_7716_injuria_racial
+    localizacao_na_fonte: Art. 2-A
+    tipo_midia: texto
+    confianca: 5
+    status_revisao: pendente
+END ITEM
+
+ITEM @lei_7716_1989
+    conteudo: Art. 20. Praticar, induzir ou incitar a discriminacao ou preconceito de raca, cor, etnia, religiao ou procedencia nacional.
+    funcao_item: evidencia_conceitual
+    forma_registro: transcricao_literal
+    status_enquadramento: incluido
+    conceitos: odio_direcionado_a_grupos
+    justificativa: O artigo ancora juridicamente parte dos ataques dirigidos a grupos, sem reduzir a categoria ontologica aos grupos expressamente previstos na lei.
+    identificador_ocorrencia: base_legal_lei_7716_grupos
+    localizacao_na_fonte: Art. 20
+    tipo_midia: texto
+    confianca: 5
+    status_revisao: pendente
+END ITEM
+
+ITEM @lei_14532_2023
+    conteudo: A Lei 14.532 de 2023 incluiu o art. 2-A na Lei 7.716 de 1989 e atualizou o art. 140, paragrafo 3, do Codigo Penal.
+    funcao_item: evidencia_conceitual
+    forma_registro: adaptacao_de_material
+    status_enquadramento: incluido
+    conceitos: injuria_eleitoral
+    justificativa: A lei separa a injuria racial no art. 2-A da Lei 7.716 de 1989 e mantem no Codigo Penal a injuria com elementos de religiao, idade ou deficiencia.
+    identificador_ocorrencia: base_legal_lei_14532_injuria
+    localizacao_na_fonte: Arts. 1 e 2
+    tipo_midia: texto
+    confianca: 5
+    status_revisao: pendente
+END ITEM
+
+ITEM @lei_14192_2021
+    conteudo: Art. 326-B. Assediar, constranger, humilhar, perseguir ou ameacar candidata a cargo eletivo ou detentora de mandato eletivo com menosprezo ou discriminacao a condicao de mulher ou a sua cor, raca ou etnia, para impedir ou dificultar campanha ou mandato.
+    funcao_item: evidencia_conceitual
+    forma_registro: adaptacao_de_material
+    status_enquadramento: incluido
+    conceitos: injuria_eleitoral, odio_direcionado_a_grupos
+    justificativa: O tipo fornece ancora juridica para violencia politica contra a mulher e reforca que a misoginia pode ser reconhecida analiticamente sem ser reduzida a um tipo penal autonomo.
+    identificador_ocorrencia: base_legal_lei_14192_violencia_politica_mulher
+    localizacao_na_fonte: Art. 4, art. 326-B do Codigo Eleitoral
+    tipo_midia: texto
+    confianca: 5
+    status_revisao: pendente
+END ITEM
+
+ITEM @lei_13834_2019
+    conteudo: Art. 326-A. Dar causa a instauracao de investigacao policial, processo judicial, investigacao administrativa, inquerito civil ou acao de improbidade, atribuindo crime ou ato infracional a pessoa que se sabe inocente, com finalidade eleitoral.
+    funcao_item: evidencia_conceitual
+    forma_registro: adaptacao_de_material
+    status_enquadramento: limite
+    conceitos: calunia_eleitoral
+    justificativa: O tipo delimita a denuncicao caluniosa com finalidade eleitoral como figura distinta da categoria de calunia eleitoral atualmente materializada na ontologia.
+    identificador_ocorrencia: limite_legal_lei_13834_denunciacao
+    localizacao_na_fonte: Art. 2, art. 326-A do Codigo Eleitoral
+    tipo_midia: texto
+    confianca: 5
+    status_revisao: pendente
+END ITEM
+
+ITEM @codigo_penal_1940
+    conteudo: Art. 359-L. Tentar, com emprego de violencia ou grave ameaca, abolir o Estado Democratico de Direito, impedindo ou restringindo o exercicio dos poderes constitucionais. Art. 359-M. Tentar depor, por meio de violencia ou grave ameaca, o governo legitimamente constituido.
+    funcao_item: evidencia_conceitual
+    forma_registro: transcricao_literal
+    status_enquadramento: incluido
+    conceitos: discursos_antidemocraticos, extremismo_antidemocratico
+    justificativa: Os tipos penais ancoram a categoria operacional quando o conteudo defende explicitamente ruptura do exercicio dos Poderes ou deposicao violenta de governo legitimamente constituido, sem converter toda classificacao em enquadramento penal automatico.
+    identificador_ocorrencia: base_legal_cp_ruptura_democratica
+    localizacao_na_fonte: Arts. 359-L e 359-M
+    tipo_midia: texto
+    confianca: 5
+    status_revisao: pendente
+END ITEM
+
+ITEM @codigo_penal_1940
+    conteudo: Paragrafo unico. Incorre na mesma pena quem incita, publicamente, animosidade entre as Forcas Armadas, ou delas contra os poderes constitucionais, as instituicoes civis ou a sociedade.
+    funcao_item: evidencia_conceitual
+    forma_registro: transcricao_literal
+    status_enquadramento: incluido
+    conceitos: discursos_antidemocraticos, extremismo_antidemocratico
+    justificativa: O dispositivo delimita uma forma juridicamente relevante de incitacao institucional e apoia a leitura de conteudos que conclamam animosidade contra Poderes ou instituicoes civis.
+    identificador_ocorrencia: base_legal_cp_incitacao_animosidade_institucional
+    localizacao_na_fonte: Art. 286, paragrafo unico
+    tipo_midia: texto
+    confianca: 5
+    status_revisao: pendente
+END ITEM
+
+ITEM @codigo_penal_1940
+    conteudo: Art. 359-N. Impedir ou perturbar a eleicao ou a afericao de seu resultado, mediante violacao indevida de mecanismos de seguranca do sistema eletronico de votacao estabelecido pela Justica Eleitoral.
+    funcao_item: evidencia_conceitual
+    forma_registro: transcricao_literal
+    status_enquadramento: limite
+    conceitos: ataque_as_urnas_eletronicas
+    justificativa: O tipo protege a eleicao contra interferencia material ou tecnologica nos mecanismos de seguranca, mas nao criminaliza isoladamente alegacao discursiva sobre urnas. Ele funciona como fronteira juridica, nao como sinonimo da categoria operacional.
+    identificador_ocorrencia: limite_legal_cp_seguranca_sistema_eleitoral
+    localizacao_na_fonte: Art. 359-N
+    tipo_midia: texto
+    confianca: 5
+    status_revisao: pendente
+END ITEM
+
+ITEM @codigo_penal_1940
+    conteudo: Art. 359-T. Nao constitui crime previsto neste Titulo a manifestacao critica aos poderes constitucionais nem a atividade jornalistica ou a reivindicacao de direitos e garantias constitucionais por meio de manifestacao politica com propositos sociais.
+    funcao_item: evidencia_conceitual
+    forma_registro: adaptacao_de_material
+    status_enquadramento: limite
+    conceitos: critica_legitima_ou_neutra
+    justificativa: O artigo estabelece fronteira expressa para critica aos Poderes, atividade jornalistica e reivindicacao social, impedindo que a categoria operacional seja usada para rotular automaticamente dissenso ou protesto legitimo.
+    identificador_ocorrencia: limite_legal_cp_critica_e_manifestacao
+    localizacao_na_fonte: Art. 359-T
+    tipo_midia: texto
+    confianca: 5
+    status_revisao: pendente
+END ITEM
+
+ITEM @constituicao_federal_1988
+    conteudo: Art. 1. A Republica Federativa do Brasil constitui-se em Estado Democratico de Direito. Paragrafo unico. Todo o poder emana do povo, que o exerce por meio de representantes eleitos ou diretamente, nos termos desta Constituicao.
+    funcao_item: evidencia_conceitual
+    forma_registro: adaptacao_de_material
+    status_enquadramento: incluido
+    conceitos: discursos_antidemocraticos
+    justificativa: Os fundamentos constitucionais de Estado Democratico de Direito e soberania popular sustentam a supercategoria como registro de conteudos que procuram erodir a legitimidade das instituicoes ou do processo eleitoral.
+    identificador_ocorrencia: base_constitucional_democracia_e_soberania
+    localizacao_na_fonte: Art. 1, caput e paragrafo unico
+    tipo_midia: texto
+    confianca: 5
+    status_revisao: pendente
+END ITEM
+
+ITEM @lc_64_1990
+    conteudo: O art. 22 permite investigar uso indevido, desvio ou abuso do poder economico ou de autoridade, ou utilizacao indevida de veiculos ou meios de comunicacao social, em beneficio de candidato ou de partido politico.
+    funcao_item: evidencia_conceitual
+    forma_registro: adaptacao_de_material
+    status_enquadramento: limite
+    conceitos: discursos_antidemocraticos, acusacao_de_fraude_institucional, ataque_as_urnas_eletronicas
+    justificativa: A norma explica a necessidade de analisar contexto eleitoral, beneficio, meio de circulacao, prova e gravidade antes de concluir por abuso ou sancao. Ela nao transforma a classificacao operacional em ilicito eleitoral automatico.
+    identificador_ocorrencia: limite_legal_lc64_abuso_e_gravidade
+    localizacao_na_fonte: Art. 22
+    tipo_midia: texto
+    confianca: 5
+    status_revisao: pendente
+END ITEM
+
+ITEM @resolucao_tse_23610_2019
+    conteudo: A utilizacao de conteudo na propaganda eleitoral pressupoe verificacao de elementos que permitam concluir, com razoavel seguranca, pela fidedignidade da informacao.
+    funcao_item: evidencia_conceitual
+    forma_registro: adaptacao_de_material
+    status_enquadramento: incluido
+    conceitos: acusacao_de_fraude_institucional
+    justificativa: O dever de fidedignidade ancora a avaliacao de alegacoes factuais de fraude institucional quando circulam como propaganda eleitoral, sem converter duvida reconhecida ou investigacao documentada em categoria positiva.
+    identificador_ocorrencia: base_legal_res23610_fidedignidade
+    localizacao_na_fonte: Art. 9
+    tipo_midia: texto
+    confianca: 5
+    status_revisao: pendente
+END ITEM
+
+ITEM @resolucao_tse_23610_2019
+    conteudo: A resolucao veda, na propaganda eleitoral, conteudo fabricado ou manipulado para difundir fatos notoriamente inveridicos ou descontextualizados com potencial de causar danos ao equilibrio do pleito ou a integridade do processo eleitoral.
+    funcao_item: evidencia_conceitual
+    forma_registro: adaptacao_de_material
+    status_enquadramento: incluido
+    conceitos: acusacao_de_fraude_institucional, ataque_as_urnas_eletronicas
+    justificativa: A regra vincula alegacoes falsas ou gravemente descontextualizadas sobre instituicoes, urnas, votacao, apuracao ou totalizacao ao bem juridico da integridade do processo eleitoral, dentro do alcance da propaganda eleitoral.
+    identificador_ocorrencia: base_legal_res23610_integridade_eleitoral
+    localizacao_na_fonte: Art. 9-C
+    tipo_midia: texto
+    confianca: 5
+    status_revisao: pendente
+END ITEM
+
+ITEM @resolucao_tse_23673_2021
+    conteudo: A Resolucao TSE 23.673 de 2021 dispoe sobre procedimentos de fiscalizacao e auditoria do sistema eletronico de votacao.
+    funcao_item: evidencia_conceitual
+    forma_registro: adaptacao_de_material
+    status_enquadramento: incluido
+    conceitos: ataque_as_urnas_eletronicas
+    justificativa: A resolucao demonstra que o sistema possui procedimentos institucionais de fiscalizacao e auditoria. Ela sustenta a distincao entre critica tecnica documentada e alegacao conclusiva de fraude que desconsidera ou distorce mecanismos relevantes de verificacao.
+    identificador_ocorrencia: base_legal_res23673_auditoria_urnas
+    localizacao_na_fonte: Ementa e procedimentos de fiscalizacao e auditoria
+    tipo_midia: texto
+    confianca: 5
+    status_revisao: pendente
+END ITEM
+
+ITEM @resolucao_tse_23755_2026
+    conteudo: Art. 9-B. A utilizacao na propaganda eleitoral, em qualquer modalidade, de conteudo sintetico multimidia gerado por meio de inteligencia artificial ou tecnologia equivalente para criar, substituir, omitir, mesclar ou alterar a velocidade ou sobrepor imagens ou sons, impoe ao responsavel pela propaganda o dever de informar, de modo explicito, destacado e acessivel, que o conteudo foi fabricado ou manipulado e qual tecnologia foi utilizada.
+    funcao_item: evidencia_conceitual
+    forma_registro: transcricao_literal
+    status_enquadramento: incluido
+    conceitos: conteudo_sintetico
+    justificativa: O artigo define operacionalmente o que e conteudo sintetico em contexto eleitoral e estabelece o dever de rotulagem. Ele ancora a categoria de conteudo sintetico e seus filhos (imagem, video e audio sinteticos) com vinculo normativo direto, sem converter a classificacao em conclusao de ilicitude.
+    identificador_ocorrencia: res_23755_rotulagem_conteudo_sintetico
+    localizacao_na_fonte: Art. 9-B
+    data_ocorrencia: 2026-03-02
+    tipo_midia: texto
+    confianca: 5
+    status_revisao: pendente
+END ITEM
+
+ITEM @resolucao_tse_23755_2026
+    conteudo: Art. 9-C, paragrafo 1. Vedado o uso, para prejudicar ou favorecer candidatura, de conteudo sintetico em audio ou video gerado ou manipulado para criar, substituir ou alterar imagem ou voz de pessoa viva, falecida ou ficticia, ainda que mediante autorizacao.
+    funcao_item: evidencia_conceitual
+    forma_registro: transcricao_literal
+    status_enquadramento: limite
+    conceitos: conteudo_sintetico
+    justificativa: O dispositivo estabelece fronteira entre conteudo sintetico permitido (com transparencia) e conteudo sintetico proibido (deepfake), incluindo pessoas vivas, falecidas e ficticias. A proibicao vale independentemente de autorizacao e de qualidade tecnica. O ITEM registra a fronteira de exclusao direta da permissao com rotulagem.
+    identificador_ocorrencia: limite_res_23755_deepfake
+    localizacao_na_fonte: Art. 9-C, paragrafo 1
+    data_ocorrencia: 2026-03-02
+    tipo_midia: texto
+    confianca: 5
+    status_revisao: pendente
+END ITEM
+
+ITEM @resolucao_tse_23755_2026
+    conteudo: Art. 9-B, paragrafo 3-A. Ficam vedadas a publicacao e a republicacao, ainda que gratuitas, bem como o impulsionamento pago de novos conteudos sinteticos produzidos ou alterados por inteligencia artificial ou por tecnologias equivalentes que utilizem imagem, voz ou manifestacao de candidata ou candidato ou de pessoa publica, mesmo que rotulados e em conformidade com as demais exigencias deste artigo, no periodo compreendido entre as 72 horas que antecedem e as 24 horas que sucedem o termino do pleito.
+    funcao_item: evidencia_conceitual
+    forma_registro: transcricao_literal
+    status_enquadramento: incluido
+    conceitos: conteudo_sintetico, ilicitude_no_ambiente_digital
+    justificativa: O dispositivo cria uma janela de silencio digital que proibe novos conteudos sinteticos com imagem, voz ou manifestacao de candidaturas e pessoas publicas nas 72h antes e 24h apos o pleito, mesmo rotulados. Sustenta o criterio temporal como componente de avaliacao de ilicitude para conteudo sintetico em periodo critico.
+    identificador_ocorrencia: janela_silencio_digital_res_23755
+    localizacao_na_fonte: Art. 9-B, paragrafo 3-A
+    data_ocorrencia: 2026-03-02
+    tipo_midia: texto
+    confianca: 5
+    status_revisao: pendente
+END ITEM
+
+ITEM @resolucao_tse_23755_2026
+    conteudo: Art. 28, paragrafo 1-C. E vedado aos provedores de aplicacao que ofertem sistemas de inteligencia artificial ou por tecnologia equivalente: I - ranquear, recomendar, sugerir ou priorizar candidatas/os, campanhas, partidos politicos, federacoes ou coligacoes; II - emitir opinioes, indicar preferencia eleitoral, recomendar voto ou realizar qualquer forma de favorecimento ou desfavorecimento politico-eleitoral, inclusive por meio de respostas automatizadas.
+    funcao_item: evidencia_conceitual
+    forma_registro: transcricao_literal
+    status_enquadramento: incluido
+    conceitos: conteudo_sintetico, ilicitude_no_ambiente_digital
+    justificativa: O dispositivo define fronteira: ferramenta de IA generativa nao pode atuar como ator eleitoral. A vedacao de recomendar, ranquear ou emitir preferencia por respostas automatizadas distingue ferramenta neutra de ferramenta que interfere no processo. Sustenta criterio de inclusao para avaliacao de ilicitude em uso de IA por provedores.
+    identificador_ocorrencia: vedacao_ia_ator_eleitoral_res_23755
+    localizacao_na_fonte: Art. 28, paragrafo 1-C, I e II
+    data_ocorrencia: 2026-03-02
+    tipo_midia: texto
+    confianca: 5
+    status_revisao: pendente
+END ITEM
+
+ITEM @resolucao_tse_23755_2026
+    conteudo: Art. 9-I. Nas representacoes que versem sobre o uso de conteudo sintetico gerado por inteligencia artificial ou por tecnologia equivalente que apurem violacoes aos arts. 9-B, 9-C, 9-D e 9-E desta Resolucao, o juiz podera, motivadamente, inverter o onus da prova quando, em razao da dificuldade tecnica de comprovacao da manipulacao digital, for excessivamente oneroso ao autor demonstrar a irregularidade do conteudo.
+    funcao_item: evidencia_conceitual
+    forma_registro: adaptacao_de_material
+    status_enquadramento: incluido
+    conceitos: conteudo_sintetico, veracidade_da_informacao
+    justificativa: A inversao motivada do onus da prova em casos de conteudo sintetico reforca que o grau de comprovacao tecnica pode variar conforme as circunstancias. Isso interage com o campo confianca do ITEM e com a dimensao de Veracidade, pois a dificuldade de demonstrar manipulacao nao decide automaticamente o valor da veracidade.
+    identificador_ocorrencia: inversao_onus_prova_res_23755
+    localizacao_na_fonte: Art. 9-I
+    data_ocorrencia: 2026-03-02
+    tipo_midia: texto
+    confianca: 4
+    status_revisao: pendente
+END ITEM
+
+ITEM @resolucao_tse_23755_2026
+    conteudo: Art. 38-A. A remocao de perfil sera feita quando se tratar de usuario com perfil falso, automatizado ou robo, e a exclusao pelos provedores de aplicacao e permitida apenas nessas hipoteses.
+    funcao_item: evidencia_conceitual
+    forma_registro: adaptacao_de_material
+    status_enquadramento: incluido
+    conceitos: conteudo_sintetico
+    justificativa: O dispositivo delimita o alcance da remocao de perfis: apenas perfis falsos, automatizados ou robo, em pratica reiterada. Sustenta fronteira entre moderacao aceitavel (remocao de bot) e moderacao que exige avaliacao judicial (remocao de perfil real). Relevante para avaliar resposta de plataformas a conteudos sinteticos que circulam sem responsavel identificavel.
+    identificador_ocorrencia: remocao_perfis_res_23755
+    localizacao_na_fonte: Art. 38-A
+    data_ocorrencia: 2026-03-02
+    tipo_midia: texto
+    confianca: 4
+    status_revisao: pendente
+END ITEM
+
+ITEM @resolucao_tse_23757_2026
+    conteudo: Art. 6, paragrafo 4. A utilizacao da internet, inclusive servicos de mensageria, para difundir informacoes falsas ou descontextualizadas em prejuizo de adversaria(o) ou em beneficio de candidata(o), ou a respeito do sistema eletronico de votacao e da Justica Eleitoral, assim como o uso de conteudo sintetico gerado ou modificado por inteligencia artificial ou tecnologias equivalentes em violacao as normas eleitorais, configura uso indevido dos meios de comunicacao e, pelas circunstancias do caso, tambem abuso dos poderes politico e economico.
+    funcao_item: evidencia_conceitual
+    forma_registro: transcricao_literal
+    status_enquadramento: incluido
+    conceitos: ilicitude_no_ambiente_digital, acusacao_de_fraude_institucional, ataque_as_urnas_eletronicas
+    justificativa: O dispositivo e a norma que fecha o circuito regulatório: conteudo sintetico em violacao a normas eleitorais configura ilicito eleitoral. Alem disso, mantiem a tipificacao de difusao de informacoes falsas ou descontextualizadas sobre o sistema eletronico de votacao e a Justica Eleitoral. Ambas as hipoteses reforcam a avaliacao de ilicitude para conteudos que atacam o sistema ou difundem falsidades, sem transformar toda classificacao em conclusao automatica de crime.
+    identificador_ocorrencia: ilicito_conteudo_sintetico_res_23757
+    localizacao_na_fonte: Art. 6, paragrafo 4
+    data_ocorrencia: 2026-03-02
+    tipo_midia: texto
+    confianca: 5
+    status_revisao: pendente
+END ITEM
+
+ITEM @resolucao_tse_23757_2026
+    conteudo: Art. 2. As medidas para o enfrentamento da desinformacao que atente contra a integridade do processo eleitoral serao realizadas nos termos da legislacao de regencia e de resolucao deste Tribunal Superior.
+    funcao_item: evidencia_conceitual
+    forma_registro: adaptacao_de_material
+    status_enquadramento: limite
+    conceitos: ilicitude_no_ambiente_digital
+    justificativa: O artigo reafirma que o enfrentamento da desinformacao segue o marco normativo do TSE, nao decisoes ad hoc. Sustenta a fronteira: a ontologia define categorias operacionais, nao poder punitivo autonomo. A avaliacao de ilicitude depende de contexto, norma e revisao especializada.
+    identificador_ocorrencia: limite_enfrentamento_desinformacao
+    localizacao_na_fonte: Art. 2
+    data_ocorrencia: 2026-03-02
+    tipo_midia: texto
+    confianca: 5
+    status_revisao: pendente
+END ITEM
+
+ITEM @resolucao_tse_23758_2026
+    conteudo: A Resolucao 23.758/2026 acrescenta o Teste de Integridade com Biometria ao rol de auditorias do sistema eletronico de votacao. O teste e realizado em locais de votacao, com eleitoras e eleitores voluntarios que consentem com a utilizacao de suas biometrias para a habilitacao da urna eletronica.
+    funcao_item: evidencia_conceitual
+    forma_registro: adaptacao_de_material
+    status_enquadramento: incluido
+    conceitos: ataque_as_urnas_eletronicas
+    justificativa: A inclusao de um teste publico de integridade com biometria de eleitores reforca o argumento de que o sistema eletronico de votacao dispoe de mecanismos de verificacao em evolucao. Sustenta a fronteira entre critica tecnica documentada e alegacao conclusiva de fraude, pois o objeto criticado continua contando com auditorias institucionais amplas e, agora, com participacao direta do eleitor.
+    identificador_ocorrencia: teste_biometria_res_23758
+    localizacao_na_fonte: Arts. 2, XVI-A, XVI-B, 53-A
+    data_ocorrencia: 2026-03-02
+    tipo_midia: texto
+    confianca: 4
+    status_revisao: pendente
+END ITEM
+
+ITEM @resolucao_tse_23758_2026
+    conteudo: A Resolucao 23.758/2026 inclui a Defensoria Publica entre as entidades fiscalizadoras do sistema eletronico de votacao, ao lado do Ministerio Publico, partidos, federacoes, OAB, Forcas Armadas e demais orgaos previstos no art. 6.
+    funcao_item: evidencia_conceitual
+    forma_registro: adaptacao_de_material
+    status_enquadramento: incluido
+    conceitos: ataque_as_urnas_eletronicas, critica_legitima_ou_neutra
+    justificativa: A ampliacao do rol de entidades fiscalizadoras inclui orgao de defesa de direitos fundamentais. Isso reforca que a fiscalizacao das urnas nao e controlada por um unico ator institucional e que criticas tecnicas feitas por orgaos legitimados constitucionalmente nao devem ser confundidas com ataques infundados ao sistema.
+    identificador_ocorrencia: includefensoria_fiscalizadoras_res_23758
+    localizacao_na_fonte: Art. 6, III-A
+    data_ocorrencia: 2026-03-02
+    tipo_midia: texto
+    confianca: 4
+    status_revisao: pendente
+END ITEM
+
+ITEM @resolucao_tse_23760_2026
+    conteudo: O Calendario Eleitoral das Eleições 2026 fixa o primeiro turno em 4 de outubro e o segundo turno em 25 de outubro. A propaganda eleitoral inicia-se em 16 de agosto de 2026.
+    funcao_item: evidencia_conceitual
+    forma_registro: adaptacao_de_material
+    status_enquadramento: incluido
+    conceitos: conteudo_sintetico, ilicitude_no_ambiente_digital
+    justificativa: As datas do calendario eleitoral definem o contexto temporal aplicavel a janela de silencio digital (72h antes e 24h apos o pleito, conforme a 23.755) e ao periodo de propaganda. Elas nao alteram conceitos, mas sao referencia operacional para avaliar se conteudos sinteticos foram publicados dentro ou fora das vedações temporais.
+    identificador_ocorrencia: datas_eleitorais_2026
+    localizacao_na_fonte: Anexo I
+    data_ocorrencia: 2026-03-02
+    tipo_midia: texto
+    confianca: 4
+    status_revisao: pendente
+END ITEM
+
+ITEM @portaria_tse_463_2026
+    conteudo: O plano de conformidade devera ser apresentado por provedores de aplicacao que disponibilizem servicos de aplicacao de internet que desempenhem funcao relevante na producao, difusao, organizacao, recomendacao, moderacao ou impulsionamento de conteudo politico-eleitoral, incluindo, expressamente, provedores com funcionalidade de geracao de conteudo sintetico por inteligencia artificial generativa, em regra com mais de cinco milhoes de usuarios ativos mensais no Brasil.
+    funcao_item: evidencia_conceitual
+    forma_registro: adaptacao_de_material
+    status_enquadramento: incluido
+    conceitos: conteudo_sintetico, ilicitude_no_ambiente_digital
+    justificativa: A portaria regulamenta quem deve apresentar plano de conformidade e define obrigatoriedade para provedores com IA generativa e grande base de usuarios. Isso sustenta o criterio de governanca de plataformas como componente de avaliacao de ilicitude: provedores com alcance significativo tem deveres reforcados de fiscalizar conteudo sintetico.
+    identificador_ocorrencia: portaria_463_escopo_provedores
+    localizacao_na_fonte: Arts. 2 e 3
+    data_ocorrencia: 2026-07-27
+    tipo_midia: texto
+    confianca: 4
+    status_revisao: pendente
+END ITEM
+
+ITEM @portaria_tse_463_2026
+    conteudo: Para sistemas de inteligencia artificial generativa, chatbots e assistentes automatizados, o plano de conformidade deve apontar salvaguardas tecnicas que impecam os sistemas de opinar, comentar ou gerar conteudos que favorecam candidaturas ou contenham recomendacao de voto. O plano deve incluir mecanismos contra tentativas de contorno, rotulagem em publicacoes organicas e testes periodicos de resistencia.
+    funcao_item: evidencia_conceitual
+    forma_registro: adaptacao_de_material
+    status_enquadramento: incluido
+    conceitos: conteudo_sintetico, ilicitude_no_ambiente_digital
+    justificativa: A portaria detalha as obrigacoes de provedores de IA generativa, incluindo exigencia de salvaguardas tecnicas contra opiniao politica, teste periodico de resistencia e mecanismos contra contorno. Sustenta o criterio operacional de que ferramentas de IA devem funcionar como infraestrutura neutra, nao como atores eleitorais, e que o descumprimento reforca a avaliacao de ilicitude.
+    identificador_ocorrencia: portaria_463_obrigacoes_ia_generativa
+    localizacao_na_fonte: Art. 2, paragrafo unico, e artigos correlatos
+    data_ocorrencia: 2026-07-27
+    tipo_midia: texto
+    confianca: 4
+    status_revisao: pendente
+END ITEM
+
+ITEM @portaria_tse_463_2026
+    conteudo: O plano de conformidade deve ser apresentado ate o dia 16 de agosto de 2026. Deve ser atualizado em ate 48 horas diante de alteracao substancial de risco e o provedor deve comunicar risco extraordinario a integridade do processo em ate 3 dias. O relatorio consolidado de implementacao deve ser entregue ate 19 de dezembro de 2026.
+    funcao_item: evidencia_conceitual
+    forma_registro: adaptacao_de_material
+    status_enquadramento: incluido
+    conceitos: ilicitude_no_ambiente_digital
+    justificativa: Os prazos da portaria estabelecem um ciclo de conformidade: entrega (16/ago), atualizacao (48h), risco extraordinario (3 dias) e relatorio final (19/dez). Sustenta o criterio de temporalidade como componente de avaliacao de ilicitude: o descumprimento dos prazos ou a ausencia de plano configuram circunstancia agravante na avaliacao normativa.
+    identificador_ocorrencia: portaria_463_prazos
+    localizacao_na_fonte: Art. 24
+    data_ocorrencia: 2026-07-27
+    tipo_midia: texto
+    confianca: 4
+    status_revisao: pendente
+END ITEM

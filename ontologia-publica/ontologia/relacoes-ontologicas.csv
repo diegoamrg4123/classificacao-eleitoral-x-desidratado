@@ -1,0 +1,2 @@
+relacao_id,conceito_origem,tipo_relacao,conceito_destino,status_revisao,justificativa,itens_evidencia,notas
+rel_calunia_requer_veracidade,calunia_eleitoral,requer_avaliacao_de_veracidade,veracidade_da_informacao,aprovado,A aplicacao de calunia eleitoral requer avaliar a falsidade da imputacao de crime sem deduzir valor especifico da escala de veracidade,base_legal_cp_calunia;base_legal_ce_calunia,Nao torna calunia subclasse de desinformacao nem conclui crime automaticamente

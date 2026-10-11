@@ -1,0 +1,2 @@
+tipo_relacao,rotulo_preferido,direcao,definicao,status_revisao,condicoes_uso,condicoes_nao_uso
+requer_avaliacao_de_veracidade,Requer avaliacao de veracidade,origem_para_destino,A aplicacao do conceito de origem requer avaliar a dimensao de destino sem concluir valor especifico da escala,aprovado,Use quando a categoria depende de verificacao factual,Nao use para causalidade ou para deduzir valor da escala

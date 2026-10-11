@@ -1,0 +1,358 @@
+TEMPLATE ontologia_dominio_eleitoral
+# Versao inicial 0.1.0
+# Compativel com Synesis 0.11.0
+
+SOURCE FIELDS
+    REQUIRED tipo_fonte, descricao_fonte
+    OPTIONAL data_acesso, periodo_coberto, ciclo_eleitoral, plataforma, url, identificador_externo, metodo_coleta, idioma, licenca, restricao_compartilhamento
+    OPTIONAL caminho_arquivo, formato_arquivo, versao_artefato, status_artefato, substituido_por
+    OPTIONAL nome_original, data_incorporacao, origem_anterior, checksum_sha256, transformacoes_incorporacao
+END SOURCE FIELDS
+
+ITEM FIELDS
+    REQUIRED conteudo, funcao_item, forma_registro, status_enquadramento, conceitos, justificativa
+    OPTIONAL contexto, identificador_ocorrencia, localizacao_na_fonte, data_ocorrencia, tipo_midia, rotulo_original, confianca, status_revisao, notas_revisao
+END ITEM FIELDS
+
+ONTOLOGY FIELDS
+    REQUIRED definicao_operacional, tipo_conceito, papel_hierarquico
+    OPTIONAL criterio_inclusao, criterio_exclusao, conceito_pai
+    OPTIONAL rotulo_preferido, sinonimos, pergunta_operacional, alvo_tipico, mecanismo_de_dano, sinais_observaveis, ordem_escala, notas
+END ONTOLOGY FIELDS
+
+FIELD tipo_fonte TYPE ENUMERATED
+    SCOPE SOURCE
+    DESCRIPTION Natureza da fonte ou do processo que originou o material.
+    VALUES
+        publicacao_academica: Artigo, livro, capitulo ou outro trabalho academico.
+        legislacao: Norma juridica aplicavel.
+        jurisprudencia: Decisao judicial ou conjunto de decisoes.
+        fonte_jornalistica: Conteudo jornalistico usado como evidencia contextual.
+        conteudo_de_plataforma: Publicacao ou ocorrencia coletada em plataforma digital.
+        dataset: Conjunto estruturado de dados.
+        observacao_e_monitoramento: Processo continuado de observacao empirica.
+        artefato_tecnico: Produto operacional criado ou incorporado pelo projeto.
+        documentacao_interna: Registro metodologico ou administrativo do projeto.
+    END VALUES
+END FIELD
+
+FIELD descricao_fonte TYPE TEXT
+    SCOPE SOURCE
+    DESCRIPTION Descricao breve do que a fonte representa no projeto.
+END FIELD
+
+FIELD data_acesso TYPE DATE
+    SCOPE SOURCE
+    DESCRIPTION Data de acesso no formato AAAA-MM-DD.
+END FIELD
+
+FIELD periodo_coberto TYPE TEXT
+    SCOPE SOURCE
+    DESCRIPTION Periodo temporal abrangido pela fonte ou processo.
+END FIELD
+
+FIELD ciclo_eleitoral TYPE TEXT
+    SCOPE SOURCE
+    DESCRIPTION Ciclo eleitoral ao qual a fonte se refere.
+END FIELD
+
+FIELD plataforma TYPE TEXT
+    SCOPE SOURCE
+    DESCRIPTION Plataforma digital associada a fonte.
+END FIELD
+
+FIELD url TYPE TEXT
+    SCOPE SOURCE
+    DESCRIPTION Endereco externo opcional da fonte.
+END FIELD
+
+FIELD identificador_externo TYPE TEXT
+    SCOPE SOURCE
+    DESCRIPTION DOI, numero processual, identificador de dataset ou outro ID externo.
+END FIELD
+
+FIELD metodo_coleta TYPE TEXT
+    SCOPE SOURCE
+    DESCRIPTION Metodo pelo qual a fonte ou os dados foram obtidos.
+END FIELD
+
+FIELD idioma TYPE TEXT
+    SCOPE SOURCE
+    DESCRIPTION Idioma predominante da fonte.
+END FIELD
+
+FIELD licenca TYPE TEXT
+    SCOPE SOURCE
+    DESCRIPTION Licenca ou condicao de uso conhecida.
+END FIELD
+
+FIELD restricao_compartilhamento TYPE TEXT
+    SCOPE SOURCE
+    DESCRIPTION Restricoes de acesso, privacidade ou redistribuicao.
+END FIELD
+
+FIELD caminho_arquivo TYPE TEXT
+    SCOPE SOURCE
+    DESCRIPTION Caminho relativo ao arquivo incorporado no subprojeto.
+END FIELD
+
+FIELD formato_arquivo TYPE TEXT
+    SCOPE SOURCE
+    DESCRIPTION Formato tecnico do artefato incorporado.
+END FIELD
+
+FIELD versao_artefato TYPE TEXT
+    SCOPE SOURCE
+    DESCRIPTION Versao declarada do artefato.
+END FIELD
+
+FIELD status_artefato TYPE ENUMERATED
+    SCOPE SOURCE
+    DESCRIPTION Estado do artefato no ciclo de vida do projeto.
+    VALUES
+        rascunho: Artefato incompleto ou em elaboracao.
+        em_validacao: Artefato disponivel para teste e revisao, ainda nao canonico.
+        ativo: Versao corrente aprovada para uso.
+        substituido: Artefato sucedido por outro registro ou versao.
+        arquivado: Artefato preservado apenas para historico, auditoria ou reproducao.
+    END VALUES
+END FIELD
+
+FIELD substituido_por TYPE TEXT
+    SCOPE SOURCE
+    DESCRIPTION ID do SOURCE que substitui este artefato.
+END FIELD
+
+FIELD nome_original TYPE TEXT
+    SCOPE SOURCE
+    DESCRIPTION Nome do arquivo antes da incorporacao ao subprojeto.
+END FIELD
+
+FIELD data_incorporacao TYPE DATE
+    SCOPE SOURCE
+    DESCRIPTION Data de incorporacao ao subprojeto no formato AAAA-MM-DD.
+END FIELD
+
+FIELD origem_anterior TYPE TEXT
+    SCOPE SOURCE
+    DESCRIPTION Local ou contexto anterior de onde o arquivo foi incorporado.
+END FIELD
+
+FIELD checksum_sha256 TYPE TEXT
+    SCOPE SOURCE
+    DESCRIPTION Hash SHA-256 do arquivo incorporado.
+END FIELD
+
+FIELD transformacoes_incorporacao TYPE TEXT
+    SCOPE SOURCE
+    DESCRIPTION Alteracoes realizadas durante a incorporacao, ou declaracao de copia integral.
+END FIELD
+
+FIELD conteudo TYPE QUOTATION
+    SCOPE ITEM
+    DESCRIPTION Fragmento, exemplo, transcricao ou descricao textual selecionada.
+    GUIDELINES
+        Preserve o texto literal quando forma_registro for transcricao_literal.
+        Identifique adaptacoes e formulacoes da equipe no campo forma_registro.
+        Mantenha o valor em uma linha para compatibilidade de compilacao.
+    END GUIDELINES
+END FIELD
+
+FIELD funcao_item TYPE ENUMERATED
+    SCOPE ITEM
+    DESCRIPTION Funcao analitica desempenhada pelo ITEM.
+    VALUES
+        exemplo_representativo: Demonstra aplicacao tipica de um conceito.
+        caso_limite: Documenta fronteira dificil entre conceitos.
+        evidencia_conceitual: Sustenta definicao, inclusao ou exclusao.
+        evidencia_empirica: Registra achado de corpus, dataset, monitoramento ou avaliacao.
+        evidencia_metodologica: Sustenta procedimento ou decisao de construcao.
+        registro_de_artefato: Documenta artefato operacional e seu vinculo ontologico.
+    END VALUES
+END FIELD
+
+FIELD forma_registro TYPE ENUMERATED
+    SCOPE ITEM
+    DESCRIPTION Forma pela qual o conteudo do ITEM foi registrado.
+    VALUES
+        transcricao_literal: Reproducao textual da fonte identificavel.
+        adaptacao_de_material: Conteudo editado, anonimizado, condensado ou parafraseado.
+        elaboracao_da_equipe: Formulacao redigida pela equipe do projeto.
+    END VALUES
+END FIELD
+
+FIELD status_enquadramento TYPE ENUMERATED
+    SCOPE ITEM
+    DESCRIPTION Resultado do ITEM diante dos conceitos associados.
+    VALUES
+        incluido: Conteudo abrangido pelo conceito.
+        excluido: Conteudo deliberadamente fora do conceito.
+        limite: Caso usado para delimitar fronteira.
+        inconclusivo: Evidencia insuficiente para decisao.
+        nao_aplicavel: ITEM conceitual, metodologico ou de artefato sem classificacao de conteudo.
+    END VALUES
+END FIELD
+
+FIELD conceitos TYPE CODE
+    SCOPE ITEM
+    DESCRIPTION Conceitos da ontologia vinculados ao ITEM.
+END FIELD
+
+FIELD justificativa TYPE MEMO
+    SCOPE ITEM
+    DESCRIPTION Explicacao do vinculo entre o conteudo, sua funcao e os conceitos aplicados.
+    GUIDELINES
+        Explique a evidencia minima que sustenta cada codigo.
+        Diferencie o texto observado da interpretacao da equipe.
+        Nao use a justificativa para criar conceito ou relacao ainda nao aprovados.
+    END GUIDELINES
+END FIELD
+
+FIELD contexto TYPE TEXT
+    SCOPE ITEM
+    DESCRIPTION Contexto necessario para interpretar o conteudo.
+END FIELD
+
+FIELD identificador_ocorrencia TYPE TEXT
+    SCOPE ITEM
+    DESCRIPTION ID da ocorrencia, documento, decisao, registro ou linha do corpus.
+END FIELD
+
+FIELD localizacao_na_fonte TYPE TEXT
+    SCOPE ITEM
+    DESCRIPTION Pagina, paragrafo, linha, intervalo ou timestamp.
+END FIELD
+
+FIELD data_ocorrencia TYPE DATE
+    SCOPE ITEM
+    DESCRIPTION Data da ocorrencia no formato AAAA-MM-DD.
+END FIELD
+
+FIELD tipo_midia TYPE ENUMERATED
+    SCOPE ITEM
+    DESCRIPTION Modalidade da unidade analisada.
+    VALUES
+        texto: Unidade predominantemente textual.
+        imagem: Imagem, meme, grafico ou captura de tela.
+        audio: Unidade sonora.
+        video: Unidade audiovisual em sequencia temporal.
+        multimodal: Duas ou mais modalidades interpretadas conjuntamente.
+    END VALUES
+END FIELD
+
+FIELD rotulo_original TYPE TEXT
+    SCOPE ITEM
+    DESCRIPTION Classificacao existente antes da harmonizacao com a ontologia.
+END FIELD
+
+FIELD confianca TYPE SCALE
+    SCOPE ITEM
+    DESCRIPTION Confianca no vinculo entre o ITEM e os conceitos, de 1 muito baixa a 5 muito alta.
+    FORMAT [1..5]
+END FIELD
+
+FIELD status_revisao TYPE ENUMERATED
+    SCOPE ITEM
+    DESCRIPTION Estado da revisao humana do ITEM.
+    VALUES
+        pendente: Ainda nao recebeu revisao humana.
+        em_revisao: Analise iniciada sem decisao concluida.
+        revisado: Conferido por pelo menos uma pessoa e apto a uso.
+        divergencia_aberta: Desacordo relevante ainda nao resolvido.
+        aprovado: Aceito formalmente para a versao ativa.
+        rejeitado: Recusado e preservado apenas para auditoria.
+    END VALUES
+END FIELD
+
+FIELD notas_revisao TYPE MEMO
+    SCOPE ITEM
+    DESCRIPTION Divergencias, pendencias ou observacoes adicionais da revisao.
+END FIELD
+
+FIELD definicao_operacional TYPE TEXT
+    SCOPE ONTOLOGY
+    DESCRIPTION Definicao que permite reconhecer o conceito e distingui-lo dos vizinhos.
+END FIELD
+
+FIELD tipo_conceito TYPE ENUMERATED
+    SCOPE ONTOLOGY
+    DESCRIPTION Funcao semantica do conceito.
+    VALUES
+        estrutural: Organiza a ontologia sem representar classificacao positiva.
+        classificatorio: Pode ser aplicado como resultado de classificacao.
+        fronteira_exclusao: Delimita casos que nao recebem classificacao positiva proxima.
+        enquadramento_transversal: Registra enquadramento aplicavel a categorias diferentes.
+    END VALUES
+END FIELD
+
+FIELD papel_hierarquico TYPE ENUMERATED
+    SCOPE ONTOLOGY
+    DESCRIPTION Posicao organizacional do conceito.
+    VALUES
+        raiz: Ponto inicial da organizacao.
+        agregador: Reune dimensoes ou blocos sem substituir suas classificacoes.
+        dimensao: Eixo transversal de analise.
+        dominio: Recorte tematico.
+        supercategoria: Familia classificatoria ampla.
+        categoria: Classe operacional aplicavel ao conteudo.
+        subcategoria: Especializacao de uma categoria.
+        valor_escala: Posicao em escala ordenada.
+        conceito_auxiliar: Elemento complementar fora da arvore classificatoria principal.
+    END VALUES
+END FIELD
+
+FIELD criterio_inclusao TYPE TEXT
+    SCOPE ONTOLOGY
+    DESCRIPTION Evidencia minima para aplicar ou reconhecer o conceito.
+END FIELD
+
+FIELD criterio_exclusao TYPE TEXT
+    SCOPE ONTOLOGY
+    DESCRIPTION Casos proximos que devem permanecer fora do conceito.
+END FIELD
+
+FIELD conceito_pai TYPE TEXT
+    SCOPE ONTOLOGY
+    DESCRIPTION ID do pai na hierarquia organizacional principal.
+END FIELD
+
+FIELD rotulo_preferido TYPE TEXT
+    SCOPE ONTOLOGY
+    DESCRIPTION Nome legivel em portugues quando diferir do ID tecnico.
+END FIELD
+
+FIELD sinonimos TYPE TEXT
+    SCOPE ONTOLOGY
+    DESCRIPTION Termos equivalentes ou nomenclaturas historicas.
+END FIELD
+
+FIELD pergunta_operacional TYPE TEXT
+    SCOPE ONTOLOGY
+    DESCRIPTION Pergunta usada para reconhecer o conceito durante a anotacao.
+END FIELD
+
+FIELD alvo_tipico TYPE TEXT
+    SCOPE ONTOLOGY
+    DESCRIPTION Pessoa, grupo, instituicao, processo ou objeto normalmente atingido.
+END FIELD
+
+FIELD mecanismo_de_dano TYPE TEXT
+    SCOPE ONTOLOGY
+    DESCRIPTION Forma pela qual o conteudo produz o dano descrito.
+END FIELD
+
+FIELD sinais_observaveis TYPE TEXT
+    SCOPE ONTOLOGY
+    DESCRIPTION Caracteristicas linguisticas, discursivas ou contextuais frequentes.
+END FIELD
+
+FIELD ordem_escala TYPE SCALE
+    SCOPE ONTOLOGY
+    DESCRIPTION Posicao numerica quando o conceito for valor de escala.
+    FORMAT [1..99]
+END FIELD
+
+FIELD notas TYPE TEXT
+    SCOPE ONTOLOGY
+    DESCRIPTION Observacoes curtas nao cobertas pelos demais campos.
+END FIELD

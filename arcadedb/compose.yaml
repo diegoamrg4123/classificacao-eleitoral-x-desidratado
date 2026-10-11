@@ -1,0 +1,22 @@
+name: wbl-ontologia-publica
+services:
+  arcadedb:
+    image: arcadedata/arcadedb:26.5.1@sha256:3d8183bceb93db2c5dba136e808f799ea0ff9b44e921c94c3364ef86c38d3b1a
+    restart: "no"
+    environment:
+      JAVA_OPTS: >-
+        -Xms256m -Xmx768m
+        -Darcadedb.server.rootPassword=${ARCADEDB_ROOT_PASSWORD:?Execute o inicializador de ambiente}
+        -Darcadedb.server.defaultDatabases=synesis_eleitoral_publica[root]
+        -Darcadedb.server.mode=development
+        -Darcadedb.opencypher.loadCsv.allowFileUrls=false
+    ports:
+      - "127.0.0.1:${ARCADEDB_HTTP_PORT:-2481}:2480"
+    volumes:
+      - dados-publicos:/home/arcadedb/databases
+      - config-publica:/home/arcadedb/config
+      - logs-publicos:/home/arcadedb/log
+volumes:
+  dados-publicos:
+  config-publica:
+  logs-publicos:

@@ -1,67 +1,105 @@
-# Classificação textual de publicações do X
+# Ontologia eleitoral e classificação textual no X
 
-Cópia pública desidratada do executor de pesquisa, com o modelo `google/gemma-4-31b-it` via OpenRouter. O modelo foi substituído por pedido de Diego, mantendo dados, contexto, prompt, contrato e parâmetros. Compartilha somente os IDs nativos dos posts: 1.461 na base e 223 na seleção histórica. Não contém textos das publicações, autoria, triagem detalhada, pacotes RAG, respostas de modelo ou credenciais. Não há liberação jurídica implícita para os materiais de terceiros usados no projeto original. Repositório público não significa corpus textual com licença aberta.
+Artefatos de apoio à consulta e revisão do artigo **Ontologia da desinformação eleitoral: bases para modelagem semântica e grafos de conhecimento aplicados à checagem de fatos em modelos de linguagem fundacionais**.
 
-## Conteúdo
+O repositório reúne duas partes independentes: um **recorte público da ontologia**, com representações consultáveis e um grafo reconstruível, e o **pipeline desidratado de classificação no X**, já disponibilizado anteriormente. Não contém o corpus textual, contexto privado ou resultados individuais. A documentação do executor anterior foi preservada em [Classificação no X](documentacao/classificacao-x.md).
 
-- `scripts/reclassificar.py`: executor e contrato preservados da cópia de origem.
-- `scripts/preparar_insumos.py`: preparação offline de entrada, triagem e RAG autorizados pelo usuário.
-- `scripts/exportar_ids.py`: exportação literal e validada de IDs, sem texto ou autoria.
-- `dados/desidratados/post_ids_base.txt`: 1.461 IDs únicos, um por linha.
-- `dados/desidratados/post_ids_selecionados.txt`: os 223 IDs selecionados, sem rótulos por post.
-- `figuras/`: Figura 3 em PNG e SVG, com contagens agregadas da execução.
-- `prompts/` e `schemas/`: instruções e schema de classificação.
-- `tests/`: testes do contrato e testes sintéticos de preparação/privacidade.
-- `dados/privados/`: diretório local ignorado pelo Git, vazio no pacote.
-- `resultados/`: diretório local ignorado pelo Git, vazio no pacote.
+## Por onde começar
 
-O snapshot RAG original foi excluído: seus campos de evidência podem conter texto de posts e conteúdo de terceiros, não apropriados para republicação. O executor precisa de pacotes RAG compatíveis fornecidos localmente. Este pacote não promete nem testa reidratação a partir da web, ArcadeDB ou recomposição do corpus. Contexto e resultados privados originais não são reconstruíveis apenas a partir do código.
+1. **Quero entender a organização conceitual:** baixe o repositório e abra [o mapa HTML](ontologia-publica/visualizacao/mapa-ontologico.html) no navegador. Não requer instalação, servidor ou credenciais. No GitHub, o arquivo HTML aparece como código: use o download ou um clone para visualizá-lo.
+2. **Quero examinar definições e critérios:** consulte [a fonte Synesis](ontologia-publica/ontologia/dominio-eleitoral.syno), [o contrato de campos](ontologia-publica/template.synt) e [as evidências normativas](ontologia-publica/itens/evidencias-publicas.syn).
+3. **Quero navegar no Protégé:** comece pelo [OWL simples](ontologia-publica/exportacoes/ontologia-simples.owl). Para proveniência e metadados, use o OWL completo.
+4. **Quero consultar o grafo em um banco:** siga o [roteiro ArcadeDB](arcadedb/README.md), que cria uma instância local apenas com os dados deste recorte.
+5. **Quero examinar a aplicação no X:** veja [a documentação do executor](documentacao/classificacao-x.md), as [listas de IDs](dados/desidratados/) e a [Figura 3](figuras/figura-3-classificacao-x.png).
 
-## Requisitos e preparação local
+## O que cada representação oferece
 
-Python 3.10 ou posterior. A execução do executor usa biblioteca padrão; não foi instalado nenhum pacote. Obtenha legalmente e por canal autorizado um conjunto correspondente de três insumos. Eles podem estar na raiz da pasta ou organizados assim:
+| Representação | Arquivo ou pasta | Finalidade |
+|---|---|---|
+| Projeto Synesis | [Manifesto](ontologia-publica/projeto.synp), template, `.syno`, `.syn` e CSVs | Examinar a fonte declarativa do recorte, suas definições, critérios, campos, evidências e relações. Compilável sem acesso à origem privada. |
+| OWL simples | [ontologia-simples.owl](ontologia-publica/exportacoes/ontologia-simples.owl) | Visualizar somente as classes, rótulos, definições e hierarquia. Não inclui fontes, evidências, relações complementares ou GraphRAG. |
+| OWL completo do recorte | [ontologia-completa.owl](ontologia-publica/exportacoes/ontologia-completa.owl) | Examinar classes conceituais, estrutura técnica Synesis, proveniência normativa, evidências e relação complementar. “Completo” refere-se ao recorte público, não ao acervo restrito. |
+| RDF/XML e Turtle | [ontologia.rdf](ontologia-publica/exportacoes/ontologia.rdf) e [ontologia.ttl](ontologia-publica/exportacoes/ontologia.ttl) | Serializações do mesmo grafo semântico do OWL completo, para ferramentas RDF. |
+| JSONL | [ontologia.jsonl](ontologia-publica/exportacoes/ontologia.jsonl) | Registros estruturados para inspeção e ingestão: manifesto, entradas com checksum, campos, conceitos, fontes, itens e relações. Não é dataset de fine-tuning. |
+| HTML interativo | [mapa-ontologico.html](ontologia-publica/visualizacao/mapa-ontologico.html) | Consultar conceitos, critérios e a relação complementar visualmente, sem infraestrutura. |
+| ArcadeDB | [Compose, importador e verificador](arcadedb/) | Reconstruir e consultar a projeção pública por vértices e arestas. Não é backup do banco experimental. |
+| Aplicação no X | [Pipeline e documentação](documentacao/classificacao-x.md) | Examinar código, prompt, contrato de saída, IDs desidratados e resultados agregados históricos. Insumos privados necessários ao replay não são distribuídos. |
 
-```text
-insumos-autorizados/
-  x__x_posts.csv
-  triagem.csv
-  contexto-rag.jsonl
-```
+## Escopo da ontologia pública
 
-ou em subpastas `entrada/`, `triagem/` e `rag/` com os nomes acima. Depois:
+O perfil `revisao-publica-normativa-v1` contém **49 conceitos, 48 vínculos hierárquicos, uma relação complementar aprovada, 15 SOURCEs normativos e 36 ITEMs de evidência conceitual**. O contrato possui 51 campos. O JSONL contém 161 registros; sua projeção ArcadeDB tem 161 vértices e 304 arestas, incluindo relações técnicas de proveniência e navegação, não apenas a árvore conceitual.
+
+A seleção adota uma lista explícita de fontes, itens e campos em [escopo-publico.json](ontologia-publica/escopo-publico.json), com checksums das entradas distribuídas. Foram preservados os IDs, definições, critérios e a hierarquia da fonte conceitual. A relação adicional liga `calunia_eleitoral` a `veracidade_da_informacao`: exige avaliação factual, sem tornar calúnia subclasse de desinformação nem deduzir valor da escala.
+
+A raiz `conteudo_tema_eleitoral` delimita o universo analisado; `dominio_eleitoral` é um ramo temático, separado das dimensões de Veracidade, Integridade e Ilicitude. No artigo, discurso hostil é a terminologia de apresentação. Os arquivos formais preservam os IDs e rótulos canônicos de discurso de ódio para manter a rastreabilidade; não houve renomeação metodológica nesta distribuição.
+
+**Estado de revisão:** o projeto permanece `rascunho_em_revisao` e os 36 ITEMs permanecem `pendente`. A relação complementar já aprovada conserva seu estado próprio. Publicação e validação técnica não promovem evidências a aprovadas, não comprovam acurácia e não produzem decisão jurídica. Os trechos normativos e adaptações devem ser conferidos nas URLs oficiais antes de uso substantivo. `confianca` mede o vínculo ITEM-conceito, não a veracidade ou ilicitude do conteúdo.
+
+### Linguagem Synesis
+
+A fonte declarativa utiliza [Synesis, linguagem e compilador para organizar anotações de pesquisa qualitativa](https://github.com/synesis-lang/synesis). O repositório oficial reúne o código-fonte, a documentação e as versões do compilador. A [documentação em português](https://synesis-lang.github.io/synesis-docs/pt/) apresenta a sintaxe e o uso da linguagem. Este pacote fixa a versão `0.11.0` para reproduzir a compilação validada, sem afirmar que seja a versão mais recente.
+
+Os exportadores OWL/RDF, JSONL detalhado, mapa HTML e importador ArcadeDB deste repositório são ferramentas derivadas do projeto de pesquisa, não formatos ou recursos nativos atribuídos ao compilador Synesis.
+
+### GraphRAG não é uma terceira ontologia
+
+O OWL completo, RDF e JSONL incluem políticas derivadas de recuperação e revisão humana. Elas ajudam a distinguir categorias operacionais de contexto estrutural e a citar ITEM e SOURCE. Não acrescentam conceitos nem dispensam revisão. Essa camada pública não é o snapshot RAG histórico usado na classificação do X, que continua excluído.
+
+No Protégé, o OWL completo inclui classes técnicas de apoio e conceitos também representados como indivíduos SKOS. Para uma árvore limpa, prefira o OWL simples, expanda `conteudo_tema_eleitoral` e configure os rótulos por `rdfs:label`. Os arquivos foram validados estruturalmente; não se afirma teste visual desta distribuição no Protégé. As IRIs originais foram mantidas como identificadores estáveis, não como promessa de endereço dereferenciável.
+
+## Privacidade e exclusões
+
+Foram excluídos desta ampliação: fontes e registros internos, exemplos e casos-limite da equipe, registros de artefatos privados, casos jurisprudenciais, conteúdo de plataformas, arquivos integrais de terceiros, entidades nomeadas e suas menções, aliases, pistas lexicais, embeddings, pacotes RAG históricos, respostas de LLM, avaliações individuais, credenciais, logs, backups e estado persistente do banco original. O campo `contexto` não é preenchido nos ITEMs distribuídos. Os exportadores desta cópia bloqueiam o carregamento da camada contextual privada.
+
+A referência normativa a biometria descreve um procedimento público do TSE; não contém dados biométricos ou registros de eleitores. As justificativas distribuídas descrevem vínculos conceituais com normas, não publicações observadas. A seleção e seus limites estão em [Privacidade e recorte](documentacao/privacidade-e-recorte.md).
+
+As listas de **1.461 IDs da base e 223 IDs selecionados**, já publicadas, foram preservadas sem acrescentar rótulos por post. IDs permitem localizar publicações e **não são anonimização**. Não há textos nem autoria nas listas; recuperar posts depende de acesso autorizado, regras da plataforma e disponibilidade. O grafo novo não inclui esses IDs.
+
+## Baixar e verificar
 
 ```bash
-python3 scripts/preparar_insumos.py --source /caminho/local/insumos-autorizados
+git clone https://github.com/diegoamrg4123/classificacao-eleitoral-x-desidratado.git
+cd classificacao-eleitoral-x-desidratado
 python3 -m unittest discover -s tests -v
-python3 scripts/reclassificar.py
+python3 ontologia-publica/validar_publico.py
 ```
 
-O preparador copia somente esses três arquivos para `dados/privados/`, atualiza `proveniencia.json` com hashes e executa validações de identidade, integridade e alinhamento. Não altera identificadores: IDs nativos são consumidos como strings literais. A seleção original de 223 em base de 1.461 foi confirmada na origem; o preparador não fabrica os números nem considera qualquer conjunto compatível sem validar os arquivos reais. O preflight precisa terminar com `preflight: ok` e zero chamadas API.
+Python 3.10 ou posterior é suficiente para os testes, validadores e exportadores, que usam biblioteca padrão. Para **recompilar e regenerar** os artefatos, é necessário Bash e `uv`/`uvx`, com Synesis fixado em `0.11.0`:
 
-O código preserva a lógica e contrato do executor original, que neste pacote não executou inferência. Para uma futura execução, é necessária autorização explícita para enviar texto privado à nuvem, chave OpenRouter fornecida localmente em `.env` ou variável de ambiente, e revisão humana. Configure `.env` a partir de `.env.example`; nunca compartilhe o arquivo. Requisições usam o modelo fixado no código. Nenhuma chamada cloud foi feita durante a preparação deste pacote.
+```bash
+bash ontologia-publica/validar.sh
+```
 
-## Resultados de origem, agregados
+A primeira obtenção do Synesis pode requerer internet; a compilação usa somente arquivos deste repositório. O mapa e as exportações prontos dispensam Synesis. O roteiro do banco requer Docker Engine e Compose e pode baixar a imagem fixada do ArcadeDB. Nenhuma dessas etapas faz chamadas a LLMs, coleta posts ou consulta o banco original.
 
-A execução vigente de origem usa `google/gemma-4-31b-it` via OpenRouter, mantendo insumos, contexto, prompt, contrato e parâmetros anteriores. A run anterior `20261006T121012788430Z`, com `google/gemma-4-26b-a4b-it`, permanece preservada na origem, separada da nova execução.
+Os testes de distribuição e os resultados reais da reconstrução estão descritos em [Validação](documentacao/validacao.md). Qualquer edição das entradas exige nova revisão da seleção e atualização dos checksums; apenas regenerar saídas não autoriza publicar novas evidências.
 
-A run `20261007T223819272404Z` foi concluída e auditada com 223 selecionados: 69 classificações provisórias, 100 sem categoria, nenhuma resposta rejeitada ao final pelo contrato, sete decisões de contexto insuficiente e 47 abstenções. Foram 224 tentativas de chamada, todas com o modelo solicitado na auditoria local. Os 69 registros classificados somam 69 atribuições primárias e três secundárias, totalizando 72 atribuições. São 66 registros com uma categoria e três com duas. Os resultados e rótulos associados a indivíduos foram deliberadamente excluídos; nenhuma categoria sensível é publicada por ID. Os totais são apenas um registro agregado da run de origem, não resultado reproduzido por esta cópia. A Figura 3 apresenta essa execução.
+## Organização
 
-## Licença e citação
+```text
+README.md                       Entrada para o revisor
+LICENSE.md                      Citação e exceção limitada de revisão
+ontologia-publica/               Fonte declarativa e entregáveis do recorte
+  fontes/registros/             Proveniência normativa selecionada
+  itens/                       Evidências conceituais normativas
+  ontologia/                   Conceitos e relações complementares
+  ferramentas/                 Exportadores derivados
+  exportacoes/                 OWL, RDF e JSONL
+  visualizacao/                Mapa HTML independente
+arcadedb/                       Banco público reconstruível via Compose
+documentacao/                   Escopo, validação e aplicação histórica
+scripts/, prompts/, schemas/    Pipeline desidratado preservado
+dados/desidratados/              IDs nativos sem textos ou rótulos
+figuras/                        Resultados agregados da aplicação
+tests/                          Verificações offline
+```
 
-**Todos os direitos reservados, exceto citação.** Permite-se citar ou mencionar este repositório com referência completa. Reprodução, redistribuição, adaptação, uso comercial ou incorporação em conjuntos de dados, sistemas ou modelos exige autorização prévia por escrito do autor. Direitos de terceiros permanecem com seus titulares. Esta licença não afirma que os insumos ou materiais de terceiros estejam liberados juridicamente.
+## Reprodução e limites
 
-Como citar: GOULART, Diego Amorim. *Classificação textual de publicações do X: pipeline e amostra desidratada*. 2026. Disponível em: https://github.com/diegoamrg4123/classificacao-eleitoral-x-desidratado. Acesso em: data de consulta.
+O clone permite recompilar o **recorte formal**, regenerar suas exportações e reconstruir o **grafo público**. Não reproduz a coleta, triagem, embeddings, RAG congelado, classificação cloud ou avaliação individual da pesquisa. O executor histórico usa `google/gemma-4-31b-it` via OpenRouter e exige insumos privados compatíveis e autorização separada. Sua execução de origem teve 223 selecionados, 69 classificações provisórias, 100 sem categoria, sete contextos insuficientes e 47 abstenções. Os detalhes e ressalvas anteriores estão preservados na documentação própria.
 
-## Escopo e limites
+## Licença e como citar
 
-A triagem detalhada, hashes e RAG são recursos externos locais. O processo não recalcula embeddings nem consulta o ArcadeDB. Validação estrutural não comprova acurácia, fatos ou enquadramento jurídico. Ausência de categoria não é um negativo confirmado; toda atribuição exige revisão humana.
+**Este repositório não tem licença aberta.** A [licença](LICENSE.md) permite citação e, exclusivamente para revisão acadêmica, download, consulta, compilação e execução local dos validadores e da reconstrução do grafo público. Não autoriza redistribuição, adaptação, exploração comercial, uso em produção ou treinamento de modelos. Direitos de terceiros permanecem com seus titulares.
 
-## Reidratação e reprodução
-
-IDs não são textos nem anonimizam as publicações: permitem localizá-las. Para recuperar conteúdos, cada pesquisador deve usar acesso próprio autorizado à API do X, sujeito às regras e custos vigentes. Posts excluídos, protegidos ou indisponíveis podem não ser recuperados. Nenhuma reidratação online foi executada ou testada neste pacote.
-
-A recuperação dos textos, por si só, não recompõe os pacotes ontológicos nem a triagem histórica. O replay exato exige também os insumos RAG e de triagem compatíveis fornecidos por canal autorizado. O preparador não converte uma resposta da API em todos esses insumos automaticamente. Não confundir um clone autocontido de código com uma cópia autocontida do corpus privado.
-
-Foram executados testes offline e um preflight isolado usando os insumos locais de origem: 1.461 entradas, 223 selecionados, 223 pacotes, zero chamadas API. Os insumos reais não foram gravados nesta pasta pública. A figura registra a execução histórica com um post por chamada, não lotes de cinco.
-
-As condições de redistribuição de IDs e a origem da coleta precisam ser consideradas pelo usuário; este pacote não declara autorização jurídica geral nem afasta os direitos dos autores. Não aplicar a licença autoral deste código aos posts recuperados. Segredos, textos, citações e resultados individuais devem continuar fora do Git, inclusive do histórico.
+GOULART, Diego Amorim. *Ontologia eleitoral e classificação textual no X: artefatos públicos para revisão*. 2026. Disponível em: https://github.com/diegoamrg4123/classificacao-eleitoral-x-desidratado. Acesso em: data de consulta. Para identificar exatamente a versão consultada, acrescente o hash do commit.

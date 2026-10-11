@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/acusacao_de_fraude_institucional">
+    <rdfs:label xml:lang="pt-BR">Acusação de Fraude Institucional</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: subcategoria. Definição operacional: Conteudo que alega, sem evidencia concreta verificavel, fraude ou manipulacao sistematica por instituicoes responsaveis pelo processo eleitoral.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/discursos_antidemocraticos" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/ataque_as_urnas_eletronicas">
+    <rdfs:label xml:lang="pt-BR">Ataque às Urnas Eletrônicas</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: subcategoria. Definição operacional: Conteudo que dissemina alegacoes tecnicas infundadas sobre inseguranca, fraude ou manipulacao das urnas eletronicas e ignora mecanismos de auditoria.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/discursos_antidemocraticos" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/audio_sintetico">
+    <rdfs:label xml:lang="pt-BR">Áudio Sintético</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: subcategoria. Definição operacional: Voz, fala, som ou musica criada por sintese computacional sem captacao autentica correspondente.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/conteudo_sintetico" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/calunia_eleitoral">
+    <rdfs:label xml:lang="pt-BR">Calúnia Eleitoral</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: subcategoria. Definição operacional: Atribuicao falsa e verificavel de fato definido como crime a pessoa no contexto eleitoral, apresentada como verdadeira.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/discurso_de_odio_eleitoral" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/conteudo_descontextualizado">
+    <rdfs:label xml:lang="pt-BR">Conteúdo Descontextualizado</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: categoria. Definição operacional: Conteudo real associado a evento, periodo, local ou pessoa diferentes daqueles em que foi produzido.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/integridade_da_informacao" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/conteudo_manipulado">
+    <rdfs:label xml:lang="pt-BR">Conteúdo Manipulado</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: supercategoria. Definição operacional: Conteudo com original autentico que foi materialmente alterado para mudar seu significado ou induzir interpretacao enganosa.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/integridade_da_informacao" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/conteudo_sintetico">
+    <rdfs:label xml:lang="pt-BR">Conteúdo Sintético</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: supercategoria. Definição operacional: Conteudo criado algoritmicamente sem captura autentica correspondente do evento, pessoa, voz ou cena representada.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/integridade_da_informacao" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/conteudo_tema_eleitoral">
+    <rdfs:label xml:lang="pt-BR">Conteúdo de tema eleitoral</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: raiz. Definição operacional: Unidade de analise cujo tema, uso ou contexto relevante envolve eleicoes, atores eleitorais, instituicoes democraticas ou processos de votacao.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/contexto_ausente">
+    <rdfs:label xml:lang="pt-BR">Contexto Ausente</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: categoria. Definição operacional: Conteudo autentico divulgado sem informacoes necessarias de data, local, circunstancia ou finalidade, produzindo interpretacao enganosa.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/integridade_da_informacao" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/critica_legitima_ou_neutra">
+    <rdfs:label xml:lang="pt-BR">Crítica Legítima ou Neutra</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: categoria. Definição operacional: Questionamento, analise ou proposta sobre instituicoes e processos eleitorais que permanece dentro do debate democratico e nao promove desinformacao nem ruptura.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/dominio_eleitoral" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/descontextualizacao">
+    <rdfs:label xml:lang="pt-BR">Descontextualização</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: categoria. Definição operacional: Trecho autentico de fala, entrevista ou documento apresentado sem partes complementares que alterariam sua interpretacao.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/integridade_da_informacao" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/desinformacao">
+    <rdfs:label xml:lang="pt-BR">Desinformação</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: agregador. Definição operacional: Conceito agregador para fenomenos de desordem informacional analisados por dimensoes separadas de veracidade e integridade, sem substituir suas classificacoes.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/conteudo_tema_eleitoral" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/difamacao_eleitoral">
+    <rdfs:label xml:lang="pt-BR">Difamação Eleitoral</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: subcategoria. Definição operacional: Imputacao ou divulgacao de fato ofensivo a reputacao de pessoa no contexto eleitoral, independentemente de o fato ser verdadeiro.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/discurso_de_odio_eleitoral" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/discurso_de_odio_eleitoral">
+    <rdfs:label xml:lang="pt-BR">Discurso de Ódio Eleitoral</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: supercategoria. Definição operacional: Conteudo que ataca deliberadamente honra, reputacao, dignidade ou direitos de pessoas ou grupos no contexto eleitoral.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/dominio_eleitoral" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/discursos_antidemocraticos">
+    <rdfs:label xml:lang="pt-BR">Discursos Antidemocráticos</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: supercategoria. Definição operacional: Conteudo que fragiliza ou desacredita instituicoes democraticas, nega legitimidade eleitoral ou incita ruptura da ordem democratica.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/dominio_eleitoral" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/dominio_eleitoral">
+    <rdfs:label xml:lang="pt-BR">Domínio Eleitoral</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: dominio. Definição operacional: Recorte tematico que organiza categorias de conteudo nocivo relacionadas a eleicoes, disputa politica, processo de votacao e legitimidade democratica.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/conteudo_tema_eleitoral" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/editado">
+    <rdfs:label xml:lang="pt-BR">Editado</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: subcategoria. Definição operacional: Video ou audio autentico rearranjado, acrescido ou reorganizado para alterar a sequencia, fala ou narrativa.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/conteudo_manipulado" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/extremismo_antidemocratico">
+    <rdfs:label xml:lang="pt-BR">Extremismo Antidemocrático</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: subcategoria. Definição operacional: Conteudo que rejeita regras e instituicoes democraticas e promove ruptura sistemica, golpe, intervencao ou violencia politica.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/discursos_antidemocraticos" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/ilicitude_no_ambiente_digital">
+    <rdfs:label xml:lang="pt-BR">Ilicitude no Ambiente Digital</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: dimensao. Definição operacional: Dimensao transversal que gradua a clareza com que um conteudo configura ilicito verificavel, sem substituir avaliacao juridica formal.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/conteudo_tema_eleitoral" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/imagem_sintetica">
+    <rdfs:label xml:lang="pt-BR">Imagem Sintética</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: subcategoria. Definição operacional: Imagem, fotografia, ilustracao ou grafico gerado por IA sem correspondencia autentica com a cena apresentada.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/conteudo_sintetico" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/inconclusivo_ilicitude">
+    <rdfs:label xml:lang="pt-BR">Inconclusivo quanto à Ilicitude</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: valor_escala. Definição operacional: Conteudo cuja ilicitude nao pode ser determinada por ambiguidade de intencao, contexto ou norma aplicavel.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/ilicitude_no_ambiente_digital" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/inconclusivo_integridade_contextual">
+    <rdfs:label xml:lang="pt-BR">Inconclusivo quanto à Integridade Contextual</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: valor_escala. Definição operacional: O contexto atribuido ao artefato nao pode ser determinado com as evidencias disponiveis.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/integridade_contextual" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/inconclusivo_integridade_midiatica">
+    <rdfs:label xml:lang="pt-BR">Inconclusivo quanto à Integridade Midiática</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: valor_escala. Definição operacional: Integridade tecnica do artefato nao pode ser determinada com as evidencias disponiveis.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/integridade_midiatica" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/inconclusivo_veracidade">
+    <rdfs:label xml:lang="pt-BR">Inconclusivo quanto à Veracidade</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: valor_escala. Definição operacional: Evidencia insuficiente ou debate em andamento impede determinar a veracidade com seguranca razoavel.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/veracidade_da_informacao" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/injuria_eleitoral">
+    <rdfs:label xml:lang="pt-BR">Injúria Eleitoral</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: subcategoria. Definição operacional: Ofensa direta a dignidade ou ao decoro de pessoa no contexto eleitoral, sem necessidade de imputacao factual especifica.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/discurso_de_odio_eleitoral" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/integridade_contextual">
+    <rdfs:label xml:lang="pt-BR">Espectro de Integridade Contextual</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: agregador. Definição operacional: Espectro complementar que classifica a autenticidade do contexto atribuido a um artefato.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/integridade_da_informacao" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/integridade_da_informacao">
+    <rdfs:label xml:lang="pt-BR">Integridade da Informação</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: dimensao. Definição operacional: Dimensao transversal que avalia autenticidade, sintese, manipulacao e adequacao contextual do artefato informacional.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/desinformacao" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/integridade_midiatica">
+    <rdfs:label xml:lang="pt-BR">Espectro de Integridade Midiática</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: agregador. Definição operacional: Espectro complementar que classifica o artefato quanto a sintese ou manipulacao tecnica.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/integridade_da_informacao" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/notoriamente_contextualizado">
+    <rdfs:label xml:lang="pt-BR">Notoriamente Contextualizado</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: valor_escala. Definição operacional: O contexto foi confirmado por fonte primaria ou verificacao especializada independente.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/integridade_contextual" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/notoriamente_descontextualizado">
+    <rdfs:label xml:lang="pt-BR">Notoriamente Descontextualizado</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: valor_escala. Definição operacional: Conteudo autentico apresentado em contexto comprovadamente falso por fonte primaria ou verificacao especializada.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/integridade_contextual" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/notoriamente_ilicito">
+    <rdfs:label xml:lang="pt-BR">Notoriamente Ilícito</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: valor_escala. Definição operacional: Conteudo que configura ilicito claro e documentado por norma aplicavel, jurisprudencia, laudo tecnico ou verificacao especializada.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/ilicitude_no_ambiente_digital" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/notoriamente_integro">
+    <rdfs:label xml:lang="pt-BR">Notoriamente Íntegro</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: valor_escala. Definição operacional: Artefato de origem verificavel, confirmado como autentico e sem evidencia de sintese ou edicao material.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/integridade_midiatica" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/notoriamente_inveridico">
+    <rdfs:label xml:lang="pt-BR">Notoriamente Inverídico</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: valor_escala. Definição operacional: Falsidade comprovada por consenso entre fontes confiaveis, sem controversia razoavel.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/veracidade_da_informacao" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/notoriamente_licito">
+    <rdfs:label xml:lang="pt-BR">Notoriamente Lícito</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: valor_escala. Definição operacional: Conteudo claramente protegido ou permitido, sem caracteristicas que configurem ilicito em norma aplicavel.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/ilicitude_no_ambiente_digital" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/notoriamente_sintetico_ou_manipulado">
+    <rdfs:label xml:lang="pt-BR">Notoriamente Sintético ou Manipulado</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: valor_escala. Definição operacional: Artefato claramente sintetizado ou substancialmente editado, confirmado por analise tecnica, origem ou evidencia perceptual robusta.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/integridade_midiatica" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/notoriamente_veridico">
+    <rdfs:label xml:lang="pt-BR">Notoriamente Verídico</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: valor_escala. Definição operacional: Fato comprovado por consenso entre fontes confiaveis, sem controversia razoavel.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/veracidade_da_informacao" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/odio_direcionado_a_grupos">
+    <rdfs:label xml:lang="pt-BR">Discurso de Ódio Direcionado a Grupos</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: subcategoria. Definição operacional: Ataque a grupo protegido por caracteristica identitaria, demografica ou pertencimento politico reconhecido, no contexto eleitoral.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/discurso_de_odio_eleitoral" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/provavelmente_contextualizado">
+    <rdfs:label xml:lang="pt-BR">Provavelmente Contextualizado</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: valor_escala. Definição operacional: O contexto parece correto e nao ha indicador relevante de descontextualizacao, mas falta confirmacao primaria.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/integridade_contextual" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/provavelmente_descontextualizado">
+    <rdfs:label xml:lang="pt-BR">Provavelmente Descontextualizado</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: valor_escala. Definição operacional: Indicadores sugerem contexto incorreto, mas a origem ainda nao foi documentada de forma conclusiva.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/integridade_contextual" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/provavelmente_integro">
+    <rdfs:label xml:lang="pt-BR">Provavelmente Íntegro</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: valor_escala. Definição operacional: Artefato aparentemente autentico e nao manipulado, sem verificacao tecnica completa.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/integridade_midiatica" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/provavelmente_sintetico_ou_manipulado">
+    <rdfs:label xml:lang="pt-BR">Provavelmente Sintético ou Manipulado</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: valor_escala. Definição operacional: Artefato com fortes indicadores de sintese ou manipulacao, mas sem confirmacao tecnica conclusiva.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/integridade_midiatica" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/recortado">
+    <rdfs:label xml:lang="pt-BR">Recortado</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: subcategoria. Definição operacional: Imagem, video ou audio cortado para remover elementos ou trechos cujo contexto alteraria a interpretacao.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/conteudo_manipulado" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/sugestivamente_ilicito">
+    <rdfs:label xml:lang="pt-BR">Sugestivamente Ilícito</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: valor_escala. Definição operacional: Conteudo com fortes indicios de ilicitude e elementos tipicos presentes, sem confirmacao definitiva.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/ilicitude_no_ambiente_digital" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/sugestivamente_inveridico">
+    <rdfs:label xml:lang="pt-BR">Sugestivamente Inverídico</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: valor_escala. Definição operacional: Preponderancia de evidencia contradiz a afirmacao, embora reste margem limitada de duvida.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/veracidade_da_informacao" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/sugestivamente_licito">
+    <rdfs:label xml:lang="pt-BR">Sugestivamente Lícito</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: valor_escala. Definição operacional: Conteudo provavelmente licito, embora contenha elementos que ainda geram duvida interpretativa.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/ilicitude_no_ambiente_digital" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/sugestivamente_veridico">
+    <rdfs:label xml:lang="pt-BR">Sugestivamente Verídico</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: valor_escala. Definição operacional: Preponderancia de evidencia apoia a afirmacao, mas permanece margem legitima para revisao.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/veracidade_da_informacao" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/transformado">
+    <rdfs:label xml:lang="pt-BR">Transformado</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: subcategoria. Definição operacional: Conteudo autentico com mudanca substancial de velocidade, tom, cor, elementos visuais ou outros atributos para enganar.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/conteudo_manipulado" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/veracidade_da_informacao">
+    <rdfs:label xml:lang="pt-BR">Veracidade da Informação</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: dimensao. Definição operacional: Dimensao transversal que descreve o estado factual das afirmacoes verificaveis, independentemente da intencao de quem as produziu.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/desinformacao" />
+  </owl:Class>
+  <owl:Class rdf:about="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/video_sintetico">
+    <rdfs:label xml:lang="pt-BR">Vídeo Sintético</rdfs:label>
+    <rdfs:comment xml:lang="pt-BR">Papel hierárquico: subcategoria. Definição operacional: Video ou deepfake gerado por IA que representa fala, identidade ou situacao sem registro audiovisual autentico correspondente.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/diegoamrg4123/dominio-eleitoral-synesis/ontology#concept/conteudo_sintetico" />
+  </owl:Class>
+</rdf:RDF>

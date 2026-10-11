@@ -1,0 +1,139 @@
+SOURCE @codigo_penal_1940
+    tipo_fonte: legislacao
+    descricao_fonte: Texto compilado do Codigo Penal, com tipos contra a honra e contra o Estado Democratico de Direito.
+    data_acesso: 2026-08-24
+    url: https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm
+    identificador_externo: Decreto-Lei 2.848/1940, arts. 138 a 145, 286 e 359-L a 359-T
+    idioma: portugues
+END SOURCE
+
+SOURCE @codigo_eleitoral_1965
+    tipo_fonte: legislacao
+    descricao_fonte: Texto compilado do Codigo Eleitoral, com os tipos especificos de calunia, difamacao e injuria em contexto de propaganda eleitoral.
+    data_acesso: 2026-08-19
+    url: https://www.planalto.gov.br/ccivil_03/leis/l4737compilado.htm
+    identificador_externo: Lei 4.737/1965, arts. 323 a 327
+    idioma: portugues
+END SOURCE
+
+SOURCE @lei_7716_1989
+    tipo_fonte: legislacao
+    descricao_fonte: Lei que define crimes resultantes de discriminacao ou preconceito, incluindo injuria racial e incitacao discriminatoria.
+    data_acesso: 2026-08-19
+    url: https://www.planalto.gov.br/ccivil_03/leis/l7716.htm
+    identificador_externo: Lei 7.716/1989, arts. 2-A e 20
+    idioma: portugues
+END SOURCE
+
+SOURCE @lei_14532_2023
+    tipo_fonte: legislacao
+    descricao_fonte: Lei que tipificou a injuria racial na Lei 7.716/1989 e atualizou o art. 140, paragrafo 3, do Codigo Penal.
+    data_acesso: 2026-08-19
+    url: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14532.htm
+    identificador_externo: Lei 14.532/2023
+    idioma: portugues
+END SOURCE
+
+SOURCE @lei_14192_2021
+    tipo_fonte: legislacao
+    descricao_fonte: Lei de prevencao e combate a violencia politica contra a mulher, com alteracoes relevantes no Codigo Eleitoral.
+    data_acesso: 2026-08-19
+    url: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14192.htm
+    identificador_externo: Lei 14.192/2021, art. 4
+    idioma: portugues
+END SOURCE
+
+SOURCE @lei_13834_2019
+    tipo_fonte: legislacao
+    descricao_fonte: Lei que acrescentou a denuncicao caluniosa com finalidade eleitoral ao Codigo Eleitoral.
+    data_acesso: 2026-08-19
+    url: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13834.htm
+    identificador_externo: Lei 13.834/2019, art. 326-A do Codigo Eleitoral
+    idioma: portugues
+END SOURCE
+
+SOURCE @constituicao_federal_1988
+    tipo_fonte: legislacao
+    descricao_fonte: Texto compilado da Constituicao Federal, com fundamentos do Estado Democratico de Direito, soberania popular e legitimidade eleitoral.
+    data_acesso: 2026-08-24
+    url: https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm
+    identificador_externo: Constituicao Federal de 1988, arts. 1 e 14, paragrafo 9
+    idioma: portugues
+END SOURCE
+
+SOURCE @lc_64_1990
+    tipo_fonte: legislacao
+    descricao_fonte: Lei Complementar de inelegibilidades, com procedimento para apurar abuso de poder e uso indevido de meios de comunicacao em beneficio eleitoral.
+    data_acesso: 2026-08-24
+    url: https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp64.htm
+    identificador_externo: Lei Complementar 64/1990, art. 22
+    idioma: portugues
+END SOURCE
+
+SOURCE @resolucao_tse_23610_2019
+    tipo_fonte: legislacao
+    descricao_fonte: Texto consolidado da resolucao sobre propaganda eleitoral, com dever de fidedignidade e regras de enfrentamento a desinformacao eleitoral.
+    data_acesso: 2026-08-24
+    url: https://www.tse.jus.br/legislacao/compilada/res/2019/resolucao-no-23-610-de-18-de-dezembro-de-2019
+    identificador_externo: Resolucao TSE 23.610/2019, arts. 9 e 9-C
+    idioma: portugues
+END SOURCE
+
+SOURCE @resolucao_tse_23673_2021
+    tipo_fonte: legislacao
+    descricao_fonte: Texto consolidado da resolucao que regula procedimentos de fiscalizacao e auditoria do sistema eletronico de votacao.
+    data_acesso: 2026-08-24
+    url: https://www.tse.jus.br/legislacao/compilada/res/2021/resolucao-no-23-673-14-de-dezembro-de-2021
+    identificador_externo: Resolucao TSE 23.673/2021
+    idioma: portugues
+END SOURCE
+
+SOURCE @resolucao_tse_23755_2026
+    tipo_fonte: legislacao
+    descricao_fonte: Resolucao do TSE que altera a Resolucao 23.610/2019 sobre propaganda eleitoral, com novas regras para conteudo sintético, rotulagem, chatbots, avatares, plataformas, janela de silencio digital e inversao do onus da prova.
+    data_acesso: 2026-08-25
+    url: https://www.tse.jus.br/legislacao/compilada/res/2026/resolucao-no-23-755-de-2-de-marco-de-2026
+    identificador_externo: Resolucao TSE 23.755/2026, Instrucao 0600751-65.2019.6.00.0000, arts. 9-B a 9-J, 28 e 38-A
+    idioma: portugues
+    ciclo_eleitoral: 2026
+END SOURCE
+
+SOURCE @resolucao_tse_23757_2026
+    tipo_fonte: legislacao
+    descricao_fonte: Resolucao do TSE que altera a Resolucao 23.735/2024 sobre ilicitos eleitorais, vinculando uso de conteudo sintético em violacao a normas eleitorais a uso indevido dos meios de comunicacao e possivel abuso de poder politico e economico.
+    data_acesso: 2026-08-25
+    url: https://www.tse.jus.br/legislacao/compilada/res/2026/resolucao-no-23-757-de-2-de-marco-de-2026
+    identificador_externo: Resolucao TSE 23.757/2026, Instrucao 0600043-39.2024.6.00.0000, art. 6, paragrafo 4
+    idioma: portugues
+    ciclo_eleitoral: 2026
+END SOURCE
+
+SOURCE @resolucao_tse_23758_2026
+    tipo_fonte: legislacao
+    descricao_fonte: Resolucao do TSE que altera a Resolucao 23.673/2021 sobre fiscalizacao e auditoria do sistema eletronico de votacao, com adicao do Teste de Integridade com Biometria e inclusao da Defensoria Publica como entidade fiscalizadora.
+    data_acesso: 2026-08-25
+    url: https://www.tse.jus.br/legislacao/compilada/res/2026/resolucao-no-23-758-de-2-de-marco-de-2026
+    identificador_externo: Resolucao TSE 23.758/2026, Instrucao 0600747-28.2019.6.00.0000
+    idioma: portugues
+    ciclo_eleitoral: 2026
+END SOURCE
+
+SOURCE @resolucao_tse_23760_2026
+    tipo_fonte: legislacao
+    descricao_fonte: Resolucao do TSE que estabelece o Calendario Eleitoral das Eleições 2026, incluindo datas do primeiro turno (4 de outubro), segundo turno (25 de outubro) e inicio da propaganda eleitoral (16 de agosto).
+    data_acesso: 2026-08-25
+    url: https://www.tse.jus.br/legislacao/compilada/res/2026/resolucao-no-23-760-de-2-de-marco-de-2026
+    identificador_externo: Resolucao TSE 23.760/2026, Instrucao 0600273-13.2026.6.00.0000
+    idioma: portugues
+    ciclo_eleitoral: 2026
+END SOURCE
+
+SOURCE @portaria_tse_463_2026
+    tipo_fonte: legislacao
+    descricao_fonte: Portaria da Presidencia do TSE que regulamenta o art. 125-B da Resolucao 23.610/2019, disciplinando planos de conformidade de provedores de aplicacao de internet, incluindo provedores com funcionalidade de geracao de conteudo sintetico por IA generativa.
+    data_acesso: 2026-08-25
+    url: https://www.tse.jus.br/legislacao/compilada/prt/2026/portaria-no-463-de-27-de-julho-de-2026
+    identificador_externo: Portaria TSE 463/2026, DJE 30/07/2026
+    idioma: portugues
+    ciclo_eleitoral: 2026
+END SOURCE

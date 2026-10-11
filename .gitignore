@@ -23,3 +23,17 @@ for-agents/
 *.pdf
 proveniencia.json
 insumos-autorizados/
+
+# Exceções estritas para o recorte público auditado, nunca para snapshots privados.
+!/ontologia-publica/ontologia/relacoes-ontologicas.csv
+!/ontologia-publica/ontologia/vocabulario-relacoes.csv
+!/ontologia-publica/exportacoes/ontologia.jsonl
+arcadedb/dados/
+arcadedb/config/
+arcadedb/logs/
+arcadedb/backups/
+ontologia-publica/runtime/
+*.log
+*.bak
+Memory.md
+.hermes/
